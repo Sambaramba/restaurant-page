@@ -1,0 +1,97 @@
+@import "./modern-normalize.css";
+
+/* 1. Use a more-intuitive box-sizing model */
+/* *, *::before, *::after {
+  box-sizing: border-box;
+} */
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add system font stack*/
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* 5. Add accessible line-height */
+  line-height: 1.2;
+  /* 6. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 7. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 8. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 9. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 10. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  11. Create a root stacking context(for app container);
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+/*----------PROJECT STYLES----------------------*/
+
+:root {
+    /* colours  */
+    --leafy-green: hsl(98, 75%, 31%);
+}
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
+
+header {
+    background-color: var(--leafy-green);
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav {
+    display: flex;
+    gap: clamp(0.5rem, 3vw, 1.5rem);
+}
+
+#content {
+    height: 100vh;
+}
+
+#welcome-msg {
+    text-align: center;
+    background-color: var(--leafy-green);
+    border-radius: 0.5rem;
+    margin:  5%10%;
+    height: 50%;
+}
