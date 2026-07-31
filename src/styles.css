@@ -62,7 +62,17 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
     /* colours  */
-    --leafy-green: hsl(98, 75%, 31%);
+    --leafy-green: hsl(113, 54%, 20%);
+    --background-green: hsl(91, 27%, 62%);
+    --background-purple: hsl(250, 27%, 62%);
+    --purple-highlight: hsl(266, 54%, 26%);
+    --deep-purple: hsl(248, 54%, 20%);
+    --strong-yellow: hsl(55, 92%, 51%);
+
+    /* Font Sizes */
+    --small: 1.5rem;
+    --medium: 2rem;
+    --large: 2.5rem;
 }
 html {
     height: 100%;
@@ -72,11 +82,33 @@ body {
 }
 
 header {
-    background-color: var(--leafy-green);
+    background-color: var(--background-green);
+    border: 0.5rem solid var(--leafy-green);
+    /* border: 0.5rem solid var(--purple-highlight); */
+    border-radius: 0.5rem;
     height: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: var(--large);
+  color: var(--deep-purple);
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: var(--medium);
+  color: var(--deep-purple);
+}
+
+p + p {
+  margin-top: 1rem;
 }
 
 nav {
@@ -84,14 +116,29 @@ nav {
     gap: clamp(0.5rem, 3vw, 1.5rem);
 }
 
+nav button {
+  background-color: var(--background-purple);
+  color: var(--deep-purple);
+  border: 0.125rem solid var(--deep-purple);
+  border-radius: 0.25rem;
+}
+
 #content {
     height: 100vh;
 }
 
+/*homepage*/
+
 #welcome-msg {
     text-align: center;
-    background-color: var(--leafy-green);
+    background-color: var(--background-green);
+    border: 0.5rem solid var(--leafy-green);
     border-radius: 0.5rem;
-    margin:  5%10%;
+    margin:  5% 10%;
+    padding: clamp(0.5rem, 3vh, 2rem);
     height: 50%;
+}
+
+#welcome-msg p {
+  font-size: var(--small);
 }
