@@ -31,6 +31,16 @@ export default {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+        generator: {
+          filename: 'assets/[name][ext]'
+        }
+      },
+      {
+        test: /\.woff2$/i,
+        type: "asset/resource",
+        generator: {
+          filename: 'assets/[name][ext]'
+        }
       },
     ],
   },
