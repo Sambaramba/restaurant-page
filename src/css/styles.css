@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
     --purple-highlight: hsl(267, 56%, 29%);
     --deep-purple: hsl(258, 50%, 26%);
     --shade-purple: hsl(247, 70%, 46%);
-    /* --deep-purple: hsl(248, 54%, 18%);        */
+    --deep-fig: #2E112D;
     --strong-yellow: hsl(55, 92%, 51%);
     --warm-cream: hsl(40, 30%, 98%);
     --amber-alert: hsl(28, 65%, 55%);
@@ -121,7 +121,6 @@ h1, h2, h3, h4, h5, h6 {
             
     --deep-moss: #0B2216;
     --sage-olive: #9DB884;
-    --deep-fig: #2E112D;
     --vibrant-orchid: #9B5DE5;
     --rich-plum: hsl(305, 45%, 25%);
 
@@ -145,7 +144,7 @@ header {
     background: linear-gradient(135deg, var(--background-green), var(--background-purple));
     border: 0.5rem solid var(--leafy-green);
     border-radius: 0.5rem;
-    height: 15vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -160,9 +159,10 @@ footer {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   font-family: "fontdiner-swanky";
   font-family: "mystery-quest";
+  /* line-height: 1.5rem; */
 }
 
 h1 {
@@ -176,8 +176,14 @@ h2 {
   color: var(--deep-purple);
 }
 
-p, ul {
+p,ul {
   color: var(--deep-purple);
+  font-family: 'journal';
+  /* font-family: "fontdiner-swanky"; */
+  /* font-family: "mystery-quest"; */
+  /* font-size: var(--large); */
+}
+p {
   font-family: 'journal';
   /* font-family: "fontdiner-swanky"; */
   /* font-family: "mystery-quest"; */
@@ -185,20 +191,32 @@ p, ul {
 }
 
 ul {
-  border: 0.125rem solid var(--deep-purple);
-  border-radius: 0.25rem;
-  max-width: 50%;
+  /* border: 0.125rem solid var(--deep-purple); */
+  /* border-radius: 0.25rem; */
+  max-width: 90%;
+  /* font-family: "roboto"; */
   /* padding: clamp(0.5rem, 0125rem + 1vh, 2rem); */
   /* padding: 0.25rem 0rem; */
-  margin-left: 30%;
+  /* margin-left: max(0.5rem, 30%); */
+  margin: 2rem auto;
   margin-top: 2rem;
-  font-size: var(--medium);
+  font-size: var(--small);
   list-style-position: inside;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
 }
 
 li {
   vertical-align: top;
+  /* text-align: center; */
+  /* display: flex;
+  flex-direction: column; */
 }
+
+/* li::marker {
+  align-self: 
+} */
 
 
 
@@ -230,6 +248,8 @@ button {
 button:hover {
   transform: scale(1.05);
   text-decoration: underline;
+  opacity: 0.8;
+  /* text-shadow: ; */
 }
 
 /* nav button {
@@ -241,10 +261,15 @@ button:hover {
 
 #content {
     /* text-align: center; */
-    background: linear-gradient(135deg, var(--background-green), var(--background-purple));
-    border: 0.25rem solid var(--leafy-green);
-    border-radius: 0.5rem;
-    margin:  2.5% 10%;
+    /* background: linear-gradient(135deg, var(--background-green), var(--background-purple)); */
+    background: url(../more-greenery-cafe-lossless.webp);
+    /* background: url(../leafy-cafe-lossy.webp); */
+    background-size: cover;
+    opacity: 0.2;
+    /* max-width: 100%; */
+    /* border: 0.25rem solid var(--leafy-green); */
+    /* border-radius: 0.5rem; */
+    /* margin:  2.5% 10%; */
     padding: clamp(0.25rem, 5vh, 2.5rem) clamp(0.5rem, 10vh, 5rem);
     min-height: 100%;
     box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
@@ -252,16 +277,21 @@ button:hover {
 
 /*homepage*/
 
-/* #welcome-msg {
-    text-align: center;
-    background: linear-gradient(135deg, var(--background-green), var(--background-purple));
+#welcome-msg {
+    /* text-align: center; */
+    /* background: linear-gradient(135deg, var(--background-green), var(--background-purple)); */
+    /* background: linear-gradient(135deg, var(--light-green), var(--warm-cream)); */
+    /* background: var(--background-green); */
+    background: var(--light-green);
+    /* background: var(--laurel-green); */
     border: 0.25rem solid var(--leafy-green);
     border-radius: 0.5rem;
-    margin:  5% 10%;
-    padding: clamp(0.5rem, 3vh, 2rem);
-    height: 50%;
+    margin:  2.5% clamp(2rem, 10%, 20rem);
+    padding: clamp(0.25rem, 5vh, 2.5rem) clamp(0.5rem, 10vh, 5rem);
+    min-height: 100%;
     box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
-} */
+    width: clamp(40ch, 70%, 90rem);
+}
 
 #content h2 {
   text-align: center;
@@ -271,9 +301,9 @@ button:hover {
   font-size: var(--large);
 }
 
-#content ul {
+/* #content ul {
   width: 70%;
-}
+} */
 
 .fade-in {
   opacity: 0;
