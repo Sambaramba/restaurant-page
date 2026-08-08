@@ -125,9 +125,10 @@ h1, h2, h3, h4, h5, h6 {
     --rich-plum: hsl(305, 45%, 25%);
 
     /* Font Sizes */
-    --small: 2rem;
-    --medium: 2.5rem;
-    --large: 3rem;
+    --small: clamp(0.75rem, 0.5rem + 1.25vw, 2rem);
+    --medium: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
+    /* --large: clamp(1.5rem, 1.2rem + 1.5vw, 3rem); */
+    --large: clamp(1.25rem, 0.9rem + 1.75vw, 3rem);
 }
 html,body {
     height: 100%;
@@ -201,6 +202,7 @@ ul {
   margin: 2rem auto;
   margin-top: 2rem;
   font-size: var(--small);
+  /* font-size: var(--medium); */
   list-style-position: inside;
   /* display: flex;
   flex-direction: column;
@@ -260,17 +262,21 @@ button:hover {
 } */
 
 #content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
     /* text-align: center; */
     /* background: linear-gradient(135deg, var(--background-green), var(--background-purple)); */
-    background: url(../more-greenery-cafe-lossless.webp);
+    background: url(../more-greenery-cafe-lossless.webp) 0% 0% / 100% 100% no-repeat scroll;
     /* background: url(../leafy-cafe-lossy.webp); */
-    background-size: cover;
-    opacity: 0.2;
+    /* background-size: cover; */
+    /* opacity: 0.2; */
     /* max-width: 100%; */
     /* border: 0.25rem solid var(--leafy-green); */
     /* border-radius: 0.5rem; */
     /* margin:  2.5% 10%; */
-    padding: clamp(0.25rem, 5vh, 2.5rem) clamp(0.5rem, 10vh, 5rem);
+    /* padding: clamp(0.25rem, 5vh, 2.5rem) clamp(0.5rem, 10vh, 5rem); */
     min-height: 100%;
     box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
 }
@@ -278,6 +284,9 @@ button:hover {
 /*homepage*/
 
 #welcome-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
     /* text-align: center; */
     /* background: linear-gradient(135deg, var(--background-green), var(--background-purple)); */
     /* background: linear-gradient(135deg, var(--light-green), var(--warm-cream)); */
@@ -290,7 +299,7 @@ button:hover {
     padding: clamp(0.25rem, 5vh, 2.5rem) clamp(0.5rem, 10vh, 5rem);
     min-height: 100%;
     box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
-    width: clamp(40ch, 70%, 90rem);
+    width: clamp(40ch, 70%, 80rem);
 }
 
 #content h2 {
