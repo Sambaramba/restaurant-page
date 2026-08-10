@@ -9,6 +9,14 @@
 }
 
 @font-face {
+    font-family: 'henny-penny';
+    src: url('.././fonts/henny-penny/HennyPenny-Regular.woff2')  format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'journal';
     src: url('.././fonts/journal/normal/journal-webfont.woff2') format('woff2');
     font-weight: normal;
@@ -145,8 +153,8 @@ header {
     background-image: linear-gradient(135deg, var(--background-green), var(--background-purple));
     border: clamp(0.125rem, 0.0625rem + 1vw,0.5rem) solid var(--leafy-green);
     border-radius: 0.5rem;
-    /* padding: ; */
-    height: 10vh;
+    padding: clamp(0.25rem,0.1625rem + 1vw ,1rem);
+    /* height: 10vh; */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -162,8 +170,9 @@ footer {
 
 h1, h2, h3, h4, h5, h6 {
   /* margin-bottom: 1rem; */
-  font-family: "fontdiner-swanky";
+  /* font-family: "fontdiner-swanky"; */
   font-family: "mystery-quest";
+  /* font-family: "henny-penny"; */
   /* line-height: 1.5rem; */
 }
 
@@ -193,28 +202,26 @@ p {
 }
 
 ul {
-  /* border: 0.125rem solid var(--deep-purple); */
-  /* border-radius: 0.25rem; */
   max-width: 90%;
-  /* font-family: "roboto"; */
-  /* padding: clamp(0.5rem, 0125rem + 1vh, 2rem); */
-  /* padding: 0.25rem 0rem; */
-  /* margin-left: max(0.5rem, 30%); */
   margin: 2rem auto;
   margin-top: 2rem;
-  font-size: var(--small);
-  /* font-size: var(--medium); */
-  list-style-position: inside;
-  /* display: flex;
+  font-size: var(--medium);
+  list-style: none;
+  display: flex;
   flex-direction: column;
-  justify-content: center; */
+  justify-content: center;
 }
 
 li {
-  vertical-align: top;
-  /* text-align: center; */
-  /* display: flex;
-  flex-direction: column; */
+  
+  display: flex;
+
+}
+
+li::before {
+  content: "\2022";
+  font-size: var(--large);
+  padding-right: 0.5rem; 
 }
 
 /* li::marker {
@@ -229,7 +236,7 @@ p + p {
 
 nav {
     display: flex;
-    gap: clamp(0.5rem, 3vw, 1.5rem);
+    /* gap: clamp(0.125rem, 0.0625rem + 1.5vw, 1.5rem); */
 }
 
 button {
