@@ -136,8 +136,8 @@ h1, h2, h3, h4, h5, h6 {
     /* Font Sizes */
     --small: clamp(0.75rem, 0.5rem + 1.25vw, 2rem);
     --medium: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
-    /* --large: clamp(1.5rem, 1.2rem + 1.5vw, 3rem); */
-    --large: clamp(1.25rem, 0.9rem + 1.75vw, 3rem);
+    --large: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
+    /* --large: clamp(1.25rem, 0.9rem + 1.75vw, 3rem); */
 }
 html,body {
     height: 100%;
@@ -157,7 +157,7 @@ header {
     /* height: 10vh; */
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     /* box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38); */
     box-shadow: 6.0px 12.0px 12.0px hsl(0deg 0% 0% / 0.31);
     
@@ -192,20 +192,20 @@ p,ul {
   font-family: 'journal';
   /* font-family: "fontdiner-swanky"; */
   /* font-family: "mystery-quest"; */
-  /* font-size: var(--large); */
+  font-size: var(--large);
 }
 p {
   font-family: 'journal';
   /* font-family: "fontdiner-swanky"; */
   /* font-family: "mystery-quest"; */
-  font-size: var(--large);
+  /* font-size: var(--large); */
 }
 
 ul {
   max-width: 90%;
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
   margin-top: 2rem;
-  font-size: var(--medium);
+  /* font-size: var(--medium); */
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -213,9 +213,7 @@ ul {
 }
 
 li {
-  
   display: flex;
-
 }
 
 li::before {
@@ -240,19 +238,10 @@ nav {
 }
 
 button {
-  /* background: linear-gradient(135deg, hsl(226, 71%, 40%), hsl(217, 91%, 60%)); */
-  /* background: linear-gradient(135deg, hsl(250, 71%, 40%), hsl(246, 91%, 60%)); */
-  /* background: linear-gradient(135deg, var(--deep-purple), var(--shade-purple)); */
-  /* color: var(--warm-cream); */
-  /* padding: 0.75rem 1.5rem; */
-  /* border-radius: 0.5rem; */
   border: none;
   background-color: inherit;
   color: var(--deep-purple);
   font-size: var(--small)
-  /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
-  /* box-shadow: 2.0px 4.0px 4.0px hsl(0deg 0% 0% / 0.44); */
-  /* transition: transform 0.2s ease-in-out; */
 }
 
 button:hover {
@@ -273,20 +262,9 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-    /* text-align: center; */
-    /* background: linear-gradient(135deg, var(--background-green), var(--background-purple)); */
-    background: url(../more-greenery-cafe-lossless.webp) 0% 0% / 100% 100% no-repeat scroll;
-    /* background: url(../leafy-cafe-lossy.webp); */
-    /* background-size: cover; */
-    /* opacity: 0.2; */
-    /* max-width: 100%; */
-    /* border: 0.25rem solid var(--leafy-green); */
-    /* border-radius: 0.5rem; */
-    /* margin:  2.5% 10%; */
-    /* padding: clamp(0.25rem, 5vh, 2.5rem) clamp(0.5rem, 10vh, 5rem); */
-    min-height: 100%;
-    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+  background: url(../more-greenery-cafe-lossless.webp) 0% 0% / 100% 100% no-repeat scroll;
+  min-height: 100%;
+  box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
 }
 
 /*homepage*/
@@ -304,7 +282,8 @@ button:hover {
     border: 0.25rem solid var(--leafy-green);
     border-radius: 0.5rem;
     margin:  2.5% clamp(2rem, 10%, 20rem);
-    padding: clamp(0.25rem, 5vh, 2.5rem) clamp(0.5rem, 10vh, 5rem);
+    padding: clamp(1rem, 0.7rem + 1.5vw, 2.5rem) clamp(2rem, 1.4rem + 3vw, 5rem);
+    /* padding: clamp(0.75rem, 0.4rem + 1.75vw, 2.5rem) clamp(1rem, 0.2rem + 4vw, 5rem); */
     min-height: 100%;
     box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
     width: clamp(40ch, 70%, 80rem);
