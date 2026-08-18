@@ -69,7 +69,7 @@ body {
   /* 4. Add system font stack*/
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   /* 5. Add accessible line-height */
-  line-height: 1.2;
+  line-height: 1.4;
   /* 6. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
@@ -199,37 +199,45 @@ p {
   /* font-family: "fontdiner-swanky"; */
   /* font-family: "mystery-quest"; */
   /* font-size: var(--large); */
+  /* line-height: 1.15rem; */
+  margin-top: clamp(1rem, 0.8rem + 1.25vw,3rem);
 }
 
 ul {
-  max-width: 90%;
+  /* max-width: 90%; */
   /* margin: 2rem auto; */
-  margin-top: 2rem;
+  margin-top: clamp(1rem, 0.8rem + 1vw, 2rem);
   /* font-size: var(--medium); */
-  list-style: none;
-  display: flex;
+  list-style-position: inside;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
 }
 
 li {
   display: flex;
+  align-items: center;
 }
 
 li::before {
   content: "\2022";
   font-size: var(--large);
-  padding-right: 0.5rem; 
+  padding-right: 0.5rem;
 }
 
 /* li::marker {
   align-self: 
 } */
 
+li span {
+  display: inline-block;
+  margin-top: -0.625rem;
+}
+
 
 
 p + p {
-  margin-top: 1rem;
+  /* margin-top: 0.5rem; */
 }
 
 nav {
