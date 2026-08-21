@@ -140,11 +140,14 @@ h1, h2, h3, h4, h5, h6 {
     --large: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
     /* --large: clamp(1.25rem, 0.9rem + 1.75vw, 3rem); */
 }
+
+
 html,body {
     /* height: 100%; */
     width: 100%;
     min-width: 100%;
 }
+
 body {
     opacity: 1 !important;
     /* min-height: 100%; */
@@ -152,6 +155,26 @@ body {
     width: 100%;
     background-color: var(--deep-fig);
 }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.shadow {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05),
+              0 6px 20px rgba(0,0,0,0.08);
+}
+
+
 
 header {
     background-color: var(--light-green);
@@ -209,42 +232,12 @@ p {
   margin-top: clamp(1rem, 0.8rem + 1.25vw,3rem);
 }
 
-ul {
-  /* max-width: 90%; */
-  /* margin: 2rem auto; */
-  margin-top: clamp(1rem, 0.8rem + 1vw, 2rem);
-  /* font-size: var(--medium); */
-  list-style-position: inside;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-}
-
-li {
-  display: flex;
-  align-items: center;
-}
-
-li::before {
-  content: "\2022";
-  font-size: var(--large);
-  padding-right: 0.5rem;
-}
-
-/* li::marker {
-  align-self: 
-} */
-
-li span {
-  display: inline-block;
-  margin-top: -0.625rem;
-}
-
-
 
 p + p {
   /* margin-top: 0.5rem; */
 }
+
+
 
 nav {
     display: flex;
@@ -305,7 +298,7 @@ button:hover {
     /* min-height: 100%; */
     box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
     width: clamp(20rem, 70%, 80rem);
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 #content h2 {
@@ -316,24 +309,25 @@ button:hover {
   font-size: var(--large);
 }
 
-/* #content ul {
-  width: 70%;
-} */
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeIn 1.5s ease forwards;
+ul {
+  margin-top: clamp(1rem, 0.8rem + 1.25vw,3rem);
+  list-style: none;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+ul li {
+  position: relative;
+  padding-left: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1;
+  
 }
 
-.shadow {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05),
-              0 6px 20px rgba(0,0,0,0.08);
+ul li::before {
+  content: "•";
+  position: absolute;
+  top: -0.11em;
+  left: 0;
+  line-height: 1;
+  font-size: 1.6em;
 }
+
