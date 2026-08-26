@@ -247,8 +247,21 @@ button:hover {
   text-decoration: underline;
   font-weight: bold;
   /* text-shadow: 0.0625rem 0.0625rem var(--warm-cream); */
-  text-shadow: 0.125rem 0.125rem var(--warm-cream);
+  /* text-shadow: 0.125rem 0.125rem var(--warm-cream); */
   cursor: pointer;
+}
+
+button:active {
+  transform: translateY(-10%);
+}
+
+#header {
+  font-size: var(--large);
+  /* color: var(--deep-purple); */
+  text-decoration: underline;
+  font-family: "mystery-quest";
+  font-weight: bold;
+  text-shadow: 0.125rem 0.125rem var(--warm-cream);
 }
 
 /* nav button {
