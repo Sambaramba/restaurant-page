@@ -1,3 +1,5 @@
+import { DomElement, removeAllChildNodes } from "./utils";
+
 //  <div id="welcome-msg" class="fade-in inner-content-container">
 //         <h2 class="fade-in">Welcome!</h2>
 //         <p class="fade-in"> Welcome to the soul food cafe, a friendly restaurant with a soulful kick.
@@ -20,3 +22,57 @@
 //             <li>strike that balance of collaboration,stylish and friendly</li>
 //         </ul>
 //     </div>
+
+
+//delete everything in #content first
+//could do utils.js func for this
+//then write code in func to add everything to #content.
+function displayHomepage() {
+    const contentDiv = document.querySelector("#content");
+
+    //clear content section
+    removeAllChildNodes(contentDiv);
+    
+    const welcomeMsg = new DomElement (
+        "div",
+        { id : "welcome-msg",
+          class: "fade-in inner-content-container"
+        }, ""
+    )
+    const welcomeHeader = new DomElement (
+        "h2",
+        {class: "fade-in" },
+        "Welcome!"
+    )
+    //use dom element constructor to create all elements with styles
+    const firstWelcomeParagraph = new DomElement (
+        "p",
+        { class: "fade-in"},
+         `Welcome to the soul food cafe, a friendly restaurant with a soulful kick.
+          Our aim is to make a restaurant thats good for the planet, healthy and balanced for the body but tastes good too.`
+    )
+    const secondWelcomeParagraph = new DomElement (
+        "p",
+        { class: "fade-in"},
+        `We are a vegetarian/vegan restaurant that aims to be as transparent about what we do and how we do it. 
+        We hopefully create a nice relaxing atmosphere and peace of mind with our ethics. 
+        We also have live bands or djs to get a bit of funk and soul in the evenings after cafe the has closed`
+    )
+    const welcomeList = new DomElement ("ul",{}, "");
+    
+    const listItem1 = new DomElement ("li",{}, "well balanced meals");
+    const listItem2 = new DomElement ("li",{}, "not losing none veggie/vegan qualities");
+    const listItem3 = new DomElement ("li",{}, "fairtrade");
+    const listItem4 = new DomElement ("li",{}, "both fake meat and non fake meat options");
+    const listItem5 = new DomElement ("li",{}, "cosy and welcoming restaurant atmosphere");
+    const listItem6 = new DomElement ("li",{}, "play nice soulful and chilled music");
+    const listItem7 = new DomElement ("li",{}, "lean energy and sustainable throughout the chain");
+    const listItem8 = new DomElement ("li",{}, "not pretentious or up ourselves with this but pure");
+    const listItem9 = new DomElement ("li",{}, "strike that balance of collaboration,stylish and friendly");
+
+    welcomeList.append(listItem1,listItem2,listItem3,listItem4,listItem5,listItem6,listItem7,listItem8,listItem9);
+    welcomeMsg.append(welcomeHeader,firstWelcomeParagraph,secondWelcomeParagraph,welcomeList);
+    contentDiv.appendChild(welcomeMsg);
+
+    return;
+}
