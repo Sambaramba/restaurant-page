@@ -3,7 +3,7 @@ class DomElement {
     constructor (type,attributes,text) {
         this.element = document.createElement(type)
         // const parentElement = document.querySelector(`${parentSelector}`);
-        console.log(parentElement);
+        // console.log(parentElement);
         for (const attribute in attributes) {
             this.element.setAttribute(attribute, attributes[attribute])
         }
@@ -15,6 +15,9 @@ class DomElement {
 }
 
 const removeAllChildNodes = function(element) {
+    if(!element.firstChild) {
+        return
+    }
     while(element.firstChild) {
         console.log(element.firstChild);
         element.removeChild(element.firstChild);
