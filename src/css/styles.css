@@ -324,36 +324,26 @@ ul li::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--light-green);
-  border: 0.25rem solid var(--leafy-green);
   border-radius: 0.5rem;
+  border: 0.25rem solid var(--leafy-green);
   margin: 3%;
   /* margin: 2.5% clamp(2rem, 1.7rem + 1.5vw, 20rem); */
+  padding: clamp(1rem, 0.7rem + 1.5vw, 2.5rem) clamp(2rem, 1.4rem + 3vw, 5rem);
   box-shadow: 0.5rem 1rem 1rem hsl(0deg 0% 0% / 0.25);
   width: clamp(20rem, 70%, 80rem);
+  min-height: 70vh;
 }
 
 /*homepage*/
 
 #welcome-msg {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-    /* text-align: center; */
-    /* background: linear-gradient(135deg, var(--background-green), var(--background-purple)); */
-    /* background: linear-gradient(135deg, var(--light-green), var(--warm-cream)); */
-    /* background: var(--background-green); */
-    /* background: var(--light-green); */
-    /* background: var(--laurel-green); */
-    /* border: 0.25rem solid var(--leafy-green);
-    border-radius: 0.5rem; */
+    background: var(--light-green);
+    border: 0.25rem solid var(--leafy-green);
+    border-radius: 0.5rem;
     /* margin:  2.5% clamp(2rem, 10%, 20rem); */
     /* margin: 2.5% 0; */
-    padding: clamp(1rem, 0.7rem + 1.5vw, 2.5rem) clamp(2rem, 1.4rem + 3vw, 5rem);
+    /* padding: clamp(1rem, 0.7rem + 1.5vw, 2.5rem) clamp(2rem, 1.4rem + 3vw, 5rem); */
     /* padding: clamp(0.75rem, 0.4rem + 1.75vw, 2.5rem) clamp(1rem, 0.2rem + 4vw, 5rem); */
-    /* min-height: 100%; */
-    /* box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
-    width: clamp(20rem, 70%, 80rem); */
     /* overflow: scroll; */
 }
 
@@ -363,6 +353,12 @@ ul li::before {
 
 #content p {
   font-size: var(--large);
+}
+
+/*---Menu page--------*/
+
+#menu-container {
+  background: var(--warm-cream);
 }
 
 
