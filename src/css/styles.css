@@ -255,7 +255,7 @@ button:active {
   transform: translateY(-10%);
 }
 
-#header {
+#main-header {
   font-size: var(--large);
   /* color: var(--deep-purple); */
   text-decoration: underline;
