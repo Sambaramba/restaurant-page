@@ -1,6 +1,7 @@
 import "../css/styles.css";
 import { DomElement } from "./utils.js";
 import { displayHomepage } from "./home.js";
+import { displayMenu } from "./menu.js";
 
 console.log("js file is running in browser");
 
@@ -24,7 +25,7 @@ header.addEventListener("click", function(event) {
             displayHomepage();
             break;
         case "menu":
-            console.log("add menu display function");
+            displayMenu();
             break;
         case "contact":
             console.log("add contact display function");
