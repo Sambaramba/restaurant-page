@@ -1,4 +1,4 @@
-import { DomElement, removeAllChildNodes } from "./utils";
+import { DomElement, removeAllChildNodes } from "./utils.js";
 
 //  <div id="welcome-msg" class="fade-in inner-content-container">
 //         <h2 class="fade-in">Welcome!</h2>
@@ -28,6 +28,7 @@ import { DomElement, removeAllChildNodes } from "./utils";
 //could do utils.js func for this
 //then write code in func to add everything to #content.
 function displayHomepage() {
+    console.log("display homepage ran");
     const contentDiv = document.querySelector("#content");
 
     //clear content section
@@ -76,3 +77,5 @@ function displayHomepage() {
 
     return;
 }
+
+export { displayHomepage };
