@@ -15,24 +15,24 @@ function displayMenu() {
     
     const menuHeader = new DomElement ("h2",{},"Menu")
     
-    const startersSection = new DomElement ("section", {}, "");
-    const starterHeader = new DomElement ("h3", {}, "Starters");
-    startersSection.append(starterHeader);
+    const breakfastSection = new DomElement ("section", {}, "");
+    const breakfastHeader = new DomElement ("h3", {}, "Breakfast");
+    breakfastSection.append(breakfastHeader);
 
-    const mainsSection = new  DomElement ("section", {}, "");
-    const mainsHeader = new DomElement ("h3", {}, "Mains");
-    mainsSection.append(mainsHeader);
+    const lunchSection = new  DomElement ("section", {}, "");
+    const lunchHeader = new DomElement ("h3", {}, "Lunch");
+    lunchSection.append(lunchHeader);
 
-    const dessertsSection = new  DomElement ("section", {}, "");
-    const dessertsHeader = new DomElement ("h3", {}, "Desserts");
-    dessertsSection.append(dessertsHeader);
+    const dessertSection = new  DomElement ("section", {}, "");
+    const dessertHeader = new DomElement ("h3", {}, "Desserts");
+    dessertSection.append(dessertHeader);
 
     const drinksSection = new  DomElement ("section", {}, "");
     const drinksHeader = new DomElement ("h3", {}, "Drinks");
     drinksSection.append(drinksHeader);
 
 
-    menuContainer.append(menuHeader, startersSection, mainsSection, dessertsSection, drinksSection);
+    menuContainer.append(menuHeader, breakfastSection, lunchSection, dessertSection, drinksSection);
     contentDiv.appendChild(menuContainer);
 
 }
