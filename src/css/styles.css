@@ -194,6 +194,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "mystery-quest";
   /* font-family: "henny-penny"; */
   /* line-height: 1.5rem; */
+  color: var(--deep-purple);
 }
 
 
@@ -234,47 +235,13 @@ h1 {
   text-decoration: underline;
 }
 
-button {
-  border: none;
-  background-color: inherit;
-  color: var(--deep-purple);
-  font-size: var(--small)
-  
-}
-
-button:hover {
-  transform: scale(1.05);
-  text-decoration: underline;
-  font-weight: bold;
-  /* text-shadow: 0.0625rem 0.0625rem var(--warm-cream); */
-  /* text-shadow: 0.125rem 0.125rem var(--warm-cream); */
-  cursor: pointer;
-}
-
-button:active {
-  transform: translateY(-10%);
-}
-
-#main-header {
-  font-size: var(--large);
-  /* color: var(--deep-purple); */
-  text-decoration: underline;
-  font-family: "mystery-quest";
-  font-weight: bold;
-  text-shadow: 0.125rem 0.125rem var(--warm-cream);
-}
-
-/* nav button {
-  background-color: var(--background-purple);
-  color: var(--deep-purple);
-  border: 0.125rem solid var(--deep-purple);
-  border-radius: 0.25rem;
-} */
-
-
 h2 {
   font-size: var(--large);
-  color: var(--deep-purple);
+  /* color: var(--deep-purple); */
+}
+
+h3 {
+  font-size: var(--small);
 }
 
 
@@ -307,6 +274,45 @@ ul li::before {
   line-height: 1;
   font-size: 1.6em;
 }
+
+button {
+  border: none;
+  background-color: inherit;
+  color: var(--deep-purple);
+  font-size: var(--small)
+  
+}
+
+button:hover {
+  transform: scale(1.05);
+  text-decoration: underline;
+  font-weight: bold;
+  /* text-shadow: 0.0625rem 0.0625rem var(--warm-cream); */
+  /* text-shadow: 0.125rem 0.125rem var(--warm-cream); */
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(-10%);
+}
+
+/* nav button {
+  background-color: var(--background-purple);
+  color: var(--deep-purple);
+  border: 0.125rem solid var(--deep-purple);
+  border-radius: 0.25rem;
+} */
+
+
+#main-header {
+  font-size: var(--large);
+  /* color: var(--deep-purple); */
+  text-decoration: underline;
+  font-family: "mystery-quest";
+  font-weight: bold;
+  text-shadow: 0.125rem 0.125rem var(--warm-cream);
+}
+
 
 #content {
   display: flex;
@@ -359,6 +365,11 @@ ul li::before {
 
 #menu-container {
   background: var(--warm-cream);
+}
+
+section {
+  width: 100%;
+  min-height: 10rem;
 }
 
 
