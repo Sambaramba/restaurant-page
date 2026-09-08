@@ -22,19 +22,19 @@ function displayMenu() {
     function createMenuItem (name,price,text) {
         const menuItemDiv =  new DomElement ("div", {class: "menu-item-container"},"");
 
-        const namePriceContainer = new DomElement ("span", {class: "name-price"},"");
+        // const namePriceContainer = new DomElement ("span", {class: "name-price"},"");
         const nameOfItem = new DomElement ("h4", {},`${name}`);
         const priceOfItem = new DomElement ("p", {},`${price}`);
         
         const description = new DomElement ("p", {},`${text}`);
 
-        namePriceContainer.append(nameOfItem,priceOfItem);
-        menuItemDiv.append(namePriceContainer,description);
+        // namePriceContainer.append(nameOfItem,priceOfItem);
+        // menuItemDiv.append(namePriceContainer,description);
+        menuItemDiv.append(nameOfItem,priceOfItem,description);
         // parent.appendChild(menuItemDiv);
         return menuItemDiv;
     }
 
-    
 
     const breakfastSection = new DomElement ("section", {}, "");
     const breakfastHeader = new DomElement ("h3", {}, "Breakfast");
