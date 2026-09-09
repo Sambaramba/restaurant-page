@@ -18,6 +18,14 @@ function displayMenu() {
     //can you make copyable dom elements with class?
 
     //for each  - div,header,price,description
+    
+    function createSubSection (name, text) {
+        const subSectionDiv = new DomElement ("div", {class: "sub-section-container"}, "");
+        const header = new DomElement ("h4", {}, `${name}`);
+        const description = new DomElement ("p", {}, `${text}`);
+        subSectionDiv.append(header, description);
+        return subSectionDiv;
+    }
 
     function createMenuItem (name,price,text) {
         const menuItemDiv =  new DomElement ("div", {class: "menu-item-container"},"");
@@ -50,13 +58,18 @@ function displayMenu() {
     breakfastSection.append(breakfastHeader,veggieBreakfast, veganBreakfast);
 
     const lunchSection = new  DomElement ("section", {}, "");
+    
     const lunchHeader = new DomElement ("h3", {}, "Lunch");
 
     //lunch menu items
     //"all pizzas come on wholemeal base with low-fat high-protein cheese but can subsite to chickpea base if allergic to gluten"
+    const pizzaSubSection = createSubSection("Pizzas", "All pizzas come on wholemeal base with low-fat high-protein cheese but can substitute to chickpea base if allergic to gluten");
     const texMexPizza = createMenuItem("Tex Mex Pizza", "£15", "Black Beans, mince/nutritional yeast,Sweetcorn, peppers,onions,jalepenos, enchilada sauce, spinach, coriander");
+    const spinachMushPizza = createMenuItem("Spinach and mushroom pizza", "£15", "Spinach, mushrooms,black olives,artichoke,sweetcorn,garlic, fake chicken/nutritional yeast");
+    pizzaSubSection.append(texMexPizza, spinachMushPizza);
 
-    lunchSection.append(lunchHeader,texMexPizza);
+    const blueCheeseBurger = createMenuItem("Blue Cheese Burger","£15","Blue cheese, chedder cheese, fake beef/lentil patty, caramalised onions");
+    lunchSection.append(lunchHeader,pizzaSubSection, blueCheeseBurger);
 
     const dessertSection = new  DomElement ("section", {}, "");
     const dessertHeader = new DomElement ("h3", {}, "Desserts");
