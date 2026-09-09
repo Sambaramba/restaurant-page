@@ -388,6 +388,7 @@ section {
 .menu-item-container{
   display: grid;
   grid-template-columns: 1fr clamp(4rem, 3.4rem + 3vw, 7rem);
+  margin-top: clamp(0.5rem, 0.3rem + 1vw, 1rem);
 }
 
 .menu-item-container > p:first-of-type {
