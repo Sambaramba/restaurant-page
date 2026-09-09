@@ -38,18 +38,25 @@ function displayMenu() {
 
     const breakfastSection = new DomElement ("section", {}, "");
     const breakfastHeader = new DomElement ("h3", {}, "Breakfast");
-    breakfastSection.append(breakfastHeader);
+    // breakfastSection.append(breakfastHeader);
 
     //breakfast menu items
-    const veggieBreakfast = createMenuItem("vegetarian Breakfast", "£13", "Sausages, Eggs, Creamy garlic Spinach mornay, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
+    const veggieBreakfast = createMenuItem("Vegetarian Breakfast", "£13", "Sausages, Eggs, Creamy garlic Spinach sauce, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
+    const veganBreakfast = createMenuItem("Vegan Breakfast", "£13", "Sausages, Scrambled Tofu, Creamy garlic Spinach sauce, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
+
     // const divider = new DomElement ("span", {class: "menu-divider"},"");
     // menuItemDiv.cloneNode(false);
 
-    breakfastSection.append(veggieBreakfast);
+    breakfastSection.append(breakfastHeader,veggieBreakfast, veganBreakfast);
 
     const lunchSection = new  DomElement ("section", {}, "");
     const lunchHeader = new DomElement ("h3", {}, "Lunch");
-    lunchSection.append(lunchHeader);
+
+    //lunch menu items
+    //"all pizzas come on wholemeal base with low-fat high-protein cheese but can subsite to chickpea base if allergic to gluten"
+    const texMexPizza = createMenuItem("Tex Mex Pizza", "£15", "Black Beans, mince/nutritional yeast,Sweetcorn, peppers,onions,jalepenos, enchilada sauce, spinach, coriander");
+
+    lunchSection.append(lunchHeader,texMexPizza);
 
     const dessertSection = new  DomElement ("section", {}, "");
     const dessertHeader = new DomElement ("h3", {}, "Desserts");
