@@ -16,14 +16,16 @@ function displayMenu() {
     const menuHeader = new DomElement ("h2",{},"Menu")
     
     //can you make copyable dom elements with class?
+    // const divider = new DomElement ("span", {class: "menu-divider"},"");
+    // menuItemDiv.cloneNode(false);
 
-    //for each  - div,header,price,description
     
     function createSubSection (name, text) {
         const subSectionDiv = new DomElement ("div", {class: "sub-section-container"}, "");
+        const divider = new DomElement ("hr", {class: "menu-divider"},"");
         const header = new DomElement ("h4", {}, `${name}`);
         const description = new DomElement ("p", {}, `${text}`);
-        subSectionDiv.append(header, description);
+        subSectionDiv.append(divider,header, description);
         return subSectionDiv;
     }
 
@@ -52,8 +54,7 @@ function displayMenu() {
     const veggieBreakfast = createMenuItem("Vegetarian Breakfast", "£13", "Sausages, Eggs, Creamy garlic Spinach sauce, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
     const veganBreakfast = createMenuItem("Vegan Breakfast", "£13", "Sausages, Scrambled Tofu, Creamy garlic Spinach sauce, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
 
-    // const divider = new DomElement ("span", {class: "menu-divider"},"");
-    // menuItemDiv.cloneNode(false);
+    
 
     breakfastSection.append(breakfastHeader,veggieBreakfast, veganBreakfast);
 
@@ -72,7 +73,8 @@ function displayMenu() {
 
     const burgerSubSection = createSubSection("Burgers", "All burgers come in wholemeal buns, served with large fresh salad and baked chips")
     const blueCheeseBurger = createMenuItem("Blue Cheese Burger","£15","Blue cheese, chedder cheese, fake beef/lentil patty, caramalised onions, baby spinach");
-    burgerSubSection.append(blueCheeseBurger);
+    const doubleCheeseBurger = createMenuItem("Bacon Double Cheese Burger", "£16", "Cheddar Cheese, 2 Patties(fake meat/lentil), fake bacon");
+    burgerSubSection.append(blueCheeseBurger, doubleCheeseBurger);
     lunchSection.append(lunchHeader,nachos,pizzaSubSection, burgerSubSection);
 
     const dessertSection = new  DomElement ("section", {}, "");
