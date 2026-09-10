@@ -397,6 +397,13 @@ section {
   background: var(--warm-cream);
 }
 
+.menu-divider {
+  /* border: 0.0625rem solid black; */
+  border: 0.0625rem solid var(--leafy-green);
+  margin: clamp(0.5rem, 0.3rem + 1vw, 1rem);
+  margin-top: clamp(1rem, 0.8rem + 1vw, 2rem);
+}
+
 .menu-item-container{
   display: grid;
   grid-template-columns: 1fr clamp(4rem, 3.4rem + 3vw, 7rem);
