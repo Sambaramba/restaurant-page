@@ -70,8 +70,10 @@ function displayMenu() {
     const spinachMushPizza = createMenuItem("Spinach and mushroom pizza", "£15", "Spinach, mushrooms,black olives,artichoke,sweetcorn,garlic, fake chicken/nutritional yeast");
     pizzaSubSection.append(texMexPizza, spinachMushPizza);
 
-    const blueCheeseBurger = createMenuItem("Blue Cheese Burger","£15","Blue cheese, chedder cheese, fake beef/lentil patty, caramalised onions");
-    lunchSection.append(lunchHeader,nachos,pizzaSubSection, blueCheeseBurger);
+    const burgerSubSection = createSubSection("Burgers", "All burgers come in wholemeal buns, served with large fresh salad and baked chips")
+    const blueCheeseBurger = createMenuItem("Blue Cheese Burger","£15","Blue cheese, chedder cheese, fake beef/lentil patty, caramalised onions, baby spinach");
+    burgerSubSection.append(blueCheeseBurger);
+    lunchSection.append(lunchHeader,nachos,pizzaSubSection, burgerSubSection);
 
     const dessertSection = new  DomElement ("section", {}, "");
     const dessertHeader = new DomElement ("h3", {}, "Desserts");
