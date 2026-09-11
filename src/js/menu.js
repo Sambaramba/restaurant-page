@@ -14,10 +14,6 @@ function displayMenu() {
         );
     
     const menuHeader = new DomElement ("h2",{},"Menu")
-    
-    //can you make copyable dom elements with class?
-    // const divider = new DomElement ("span", {class: "menu-divider"},"");
-    // menuItemDiv.cloneNode(false);
 
     
     function createSubSection (name, text) {
@@ -48,12 +44,10 @@ function displayMenu() {
 
     const breakfastSection = new DomElement ("section", {}, "");
     const breakfastHeader = new DomElement ("h3", {}, "Breakfast");
-    // breakfastSection.append(breakfastHeader);
 
     //breakfast menu items
     const veggieBreakfast = createMenuItem("Vegetarian Breakfast", "£13", "Sausages, Eggs, Creamy garlic Spinach sauce, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
     const veganBreakfast = createMenuItem("Vegan Breakfast", "£13", "Sausages, Scrambled Tofu, Creamy garlic Spinach sauce, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
-
     breakfastSection.append(breakfastHeader,veggieBreakfast, veganBreakfast);
 
 
@@ -62,7 +56,7 @@ function displayMenu() {
 
     //lunch menu items
     const nachos = createMenuItem("Loaded Nachos", "14", "lentil/fake mince chilli,Jalapenos, Tomato Salsa, Guacamole, Light Creme Fraiche,Olives,Wholemeal Tortilla Nachos");
-    //"all pizzas come on wholemeal base with low-fat high-protein cheese but can subsite to chickpea base if allergic to gluten"
+
     const pizzaSubSection = createSubSection("Pizzas", "All pizzas come on wholemeal base with low-fat high-protein cheese but can substitute to chickpea base if allergic to gluten");
     const texMexPizza = createMenuItem("Tex Mex Pizza", "£15", "Black Beans, mince/nutritional yeast,Sweetcorn, peppers,onions,jalepenos, enchilada sauce, spinach, coriander");
     const spinachMushPizza = createMenuItem("Spinach and mushroom pizza", "£15", "Spinach, mushrooms,black olives,artichoke,sweetcorn,garlic, fake chicken/nutritional yeast");
@@ -78,7 +72,6 @@ function displayMenu() {
 
     const dessertSection = new  DomElement ("section", {}, "");
     const dessertHeader = new DomElement ("h3", {}, "Desserts");
-
     const dessertDescription = new DomElement("p", {class: "section-description"}, "All deserts can be made vegan if you notify staff");
 
     //desert items
@@ -88,8 +81,11 @@ function displayMenu() {
     const etonMess = createMenuItem("Clotted cream Eton Mess", "£7", "Delicious clotted cream, with fresh berries and broken up bits of crunchy meringue, drizzled with raspberry coulis");
     dessertSection.append(dessertHeader,dessertDescription, banoffiePie, biscoffCheesecake,etonMess);
 
+
     const drinksSection = new  DomElement ("section", {}, "");
     const drinksHeader = new DomElement ("h3", {}, "Drinks");
+
+    //drinks items
     const coke = createMenuItem("Coke (half/pint)", "£1.50/£3", "");
     const lemonade = createMenuItem("lemonade (half/pint)", "£1.50/£3", "");
     const appletiser = createMenuItem("Appletiser (Bottle)", "£2", "");
@@ -97,16 +93,14 @@ function displayMenu() {
     const earlGrey = createMenuItem("Earl Grey (pot for 1)","£2.50", "");
     const chai = createMenuItem("Chai Latte","£3", "");
     const coffee = createMenuItem("Coffee","£3", "");
-    const cobra = createMenuItem("Cobra Draught(half/pint)","£3/6", "");
-    const whiteWine = createMenuItem("White Wine(glass)","£5", "");
-    const redWine = createMenuItem("Red Wine(glass)","£5", "");
-
+    const cobra = createMenuItem("Cobra Draught (half/pint)","£3/6", "");
+    const whiteWine = createMenuItem("White Wine (glass)","£5", "");
+    const redWine = createMenuItem("Red Wine (glass)","£5", "");
     drinksSection.append(drinksHeader, coke, lemonade, appletiser, englishBreakfast, earlGrey, chai,coffee ,cobra, whiteWine, redWine);
 
 
     menuContainer.append(menuHeader, breakfastSection, lunchSection, dessertSection, drinksSection);
     contentDiv.appendChild(menuContainer);
-
 }
 
 export { displayMenu };
