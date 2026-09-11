@@ -397,6 +397,12 @@ section {
   background: var(--warm-cream);
 }
 
+.section-description {
+  font-size: var(--xx-small);
+  text-align: center;
+  margin-bottom: clamp(1rem, 0.8rem + 1vw, 2rem);
+}
+
 .menu-divider {
   /* border: 0.0625rem solid black; */
   border: 0.0625rem solid var(--leafy-green);
