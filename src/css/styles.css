@@ -340,6 +340,7 @@ button:active {
   align-items: center;
   border-radius: 0.5rem;
   border: 0.25rem solid var(--leafy-green);
+  background: var(--light-green);
   margin: 3%;
   /* margin: 2.5% clamp(2rem, 1.7rem + 1.5vw, 20rem); */
   padding: clamp(1rem, 0.7rem + 1.5vw, 2.5rem) clamp(2rem, 1.4rem + 3vw, 5rem);
@@ -387,7 +388,8 @@ button:active {
   text-align: center;
 }
 
-section {
+section,
+#contact-info-container {
   width: 100%;
   min-height: 20rem;
   border: 0.25rem solid var(--leafy-green);
