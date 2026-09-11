@@ -79,12 +79,14 @@ function displayMenu() {
     const dessertSection = new  DomElement ("section", {}, "");
     const dessertHeader = new DomElement ("h3", {}, "Desserts");
 
+    const dessertDescription = new DomElement("p", {class: "section-description"}, "All deserts can be made vegan if you notify staff");
+
     //desert items
     const banoffiePie = createMenuItem("Banoffie Pie","£7", "Vanilla oat base, toffee caramel, bananas, oaty whipped creamy mascapone, dark choc shavings");
-    const veganBanoffiePie = createMenuItem("Vegan Banoffie Pie","£7", "Vanilla oat base, date caramel, bananas, oaty whipped cream, dark choc shavings");
+    // const veganBanoffiePie = createMenuItem("Vegan Banoffie Pie","£7", "Vanilla oat base, date caramel, bananas, oaty whipped cream, dark choc shavings");
     const biscoffCheesecake = createMenuItem("Biscoff Cheesecake", "£7", "Creamy vanilla cheesecake with crushed Biscoff® pieces. Topped with delicious Biscoff® spread & crumb, on crunchy oaty vanilla biscuit base.")
-    const etonMess = createMenuItem("Clotted cream Eton Mess", "£7", "delicious clotted cream, with fresh berries and broken up bits of crunchy meringue, drizzled with raspberry coulis");
-    dessertSection.append(dessertHeader,banoffiePie, veganBanoffiePie, biscoffCheesecake,etonMess);
+    const etonMess = createMenuItem("Clotted cream Eton Mess", "£7", "Delicious clotted cream, with fresh berries and broken up bits of crunchy meringue, drizzled with raspberry coulis");
+    dessertSection.append(dessertHeader,dessertDescription, banoffiePie, biscoffCheesecake,etonMess);
 
     const drinksSection = new  DomElement ("section", {}, "");
     const drinksHeader = new DomElement ("h3", {}, "Drinks");
