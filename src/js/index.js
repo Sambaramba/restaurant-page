@@ -2,6 +2,7 @@ import "../css/styles.css";
 import { DomElement } from "./utils.js";
 import { displayHomepage } from "./home.js";
 import { displayMenu } from "./menu.js";
+import { displayContactPage } from "./contact.js";
 
 console.log("js file is running in browser");
 
@@ -29,6 +30,7 @@ header.addEventListener("click", function(event) {
             break;
         case "contact":
             console.log("add contact display function");
+            displayContactPage();
             break;
         default:
             console.log(`No id or event listener for ${closestTab} element`);
