@@ -90,7 +90,18 @@ function displayMenu() {
 
     const drinksSection = new  DomElement ("section", {}, "");
     const drinksHeader = new DomElement ("h3", {}, "Drinks");
-    drinksSection.append(drinksHeader);
+    const coke = createMenuItem("Coke (half/pint)", "£1.50/£3", "");
+    const lemonade = createMenuItem("lemonade (half/pint)", "£1.50/£3", "");
+    const appletiser = createMenuItem("Appletiser (Bottle)", "£2", "");
+    const englishBreakfast = createMenuItem("English breakfast (pot for 1)","£2.50", "");
+    const earlGrey = createMenuItem("Earl Grey (pot for 1)","£2.50", "");
+    const chai = createMenuItem("Chai Latte","£3", "");
+    const coffee = createMenuItem("Coffee","£3", "");
+    const cobra = createMenuItem("Cobra Draught(half/pint)","£3/6", "");
+    const whiteWine = createMenuItem("White Wine(glass)","£5", "");
+    const redWine = createMenuItem("Red Wine(glass)","£5", "");
+
+    drinksSection.append(drinksHeader, coke, lemonade, appletiser, englishBreakfast, earlGrey, chai,coffee ,cobra, whiteWine, redWine);
 
 
     menuContainer.append(menuHeader, breakfastSection, lunchSection, dessertSection, drinksSection);
