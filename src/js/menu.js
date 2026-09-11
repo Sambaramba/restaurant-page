@@ -54,16 +54,13 @@ function displayMenu() {
     const veggieBreakfast = createMenuItem("Vegetarian Breakfast", "£13", "Sausages, Eggs, Creamy garlic Spinach sauce, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
     const veganBreakfast = createMenuItem("Vegan Breakfast", "£13", "Sausages, Scrambled Tofu, Creamy garlic Spinach sauce, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
 
-    
-
     breakfastSection.append(breakfastHeader,veggieBreakfast, veganBreakfast);
 
+
     const lunchSection = new  DomElement ("section", {}, "");
-    
     const lunchHeader = new DomElement ("h3", {}, "Lunch");
 
     //lunch menu items
-
     const nachos = createMenuItem("Loaded Nachos", "14", "lentil/fake mince chilli,Jalapenos, Tomato Salsa, Guacamole, Light Creme Fraiche,Olives,Wholemeal Tortilla Nachos");
     //"all pizzas come on wholemeal base with low-fat high-protein cheese but can subsite to chickpea base if allergic to gluten"
     const pizzaSubSection = createSubSection("Pizzas", "All pizzas come on wholemeal base with low-fat high-protein cheese but can substitute to chickpea base if allergic to gluten");
@@ -75,11 +72,19 @@ function displayMenu() {
     const blueCheeseBurger = createMenuItem("Blue Cheese Burger","£15","Blue cheese, chedder cheese, fake beef/lentil patty, caramalised onions, baby spinach");
     const doubleCheeseBurger = createMenuItem("Bacon Double Cheese Burger", "£16", "Cheddar Cheese, 2 Patties(fake meat/lentil), fake bacon");
     burgerSubSection.append(blueCheeseBurger, doubleCheeseBurger);
+
     lunchSection.append(lunchHeader,nachos,pizzaSubSection, burgerSubSection);
+
 
     const dessertSection = new  DomElement ("section", {}, "");
     const dessertHeader = new DomElement ("h3", {}, "Desserts");
-    dessertSection.append(dessertHeader);
+
+    //desert items
+    const banoffiePie = createMenuItem("Banoffie Pie","£7", "Vanilla oat base, toffee caramel, bananas, oaty whipped creamy mascapone, dark choc shavings");
+    const veganBanoffiePie = createMenuItem("Vegan Banoffie Pie","£7", "Vanilla oat base, date caramel, bananas, oaty whipped cream, dark choc shavings");
+    const biscoffCheesecake = createMenuItem("Biscoff Cheesecake", "£7", "Creamy vanilla cheesecake with crushed Biscoff® pieces. Topped with delicious Biscoff® spread & crumb, on crunchy oaty vanilla biscuit base.")
+    const etonMess = createMenuItem("Clotted cream Eton Mess", "£7", "delicious clotted cream, with fresh berries and broken up bits of crunchy meringue, drizzled with raspberry coulis");
+    dessertSection.append(dessertHeader,banoffiePie, veganBanoffiePie, biscoffCheesecake,etonMess);
 
     const drinksSection = new  DomElement ("section", {}, "");
     const drinksHeader = new DomElement ("h3", {}, "Drinks");
