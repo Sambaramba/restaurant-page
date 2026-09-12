@@ -42,7 +42,7 @@ function displayMenu() {
     }
 
 
-    const breakfastSection = new DomElement ("section", {}, "");
+    const breakfastSection = new DomElement ("section", {class: "menu-section"}, "");
     const breakfastHeader = new DomElement ("h3", {}, "Breakfast");
 
     //breakfast menu items
@@ -51,7 +51,7 @@ function displayMenu() {
     breakfastSection.append(breakfastHeader,veggieBreakfast, veganBreakfast);
 
 
-    const lunchSection = new  DomElement ("section", {}, "");
+    const lunchSection = new  DomElement ("section", {class: "menu-section"}, "");
     const lunchHeader = new DomElement ("h3", {}, "Lunch");
 
     //lunch menu items
@@ -70,7 +70,7 @@ function displayMenu() {
     lunchSection.append(lunchHeader,nachos,pizzaSubSection, burgerSubSection);
 
 
-    const dessertSection = new  DomElement ("section", {}, "");
+    const dessertSection = new  DomElement ("section", {class: "menu-section"}, "");
     const dessertHeader = new DomElement ("h3", {}, "Desserts");
     const dessertDescription = new DomElement("p", {class: "section-description"}, "All deserts can be made vegan if you notify staff");
 
@@ -82,7 +82,7 @@ function displayMenu() {
     dessertSection.append(dessertHeader,dessertDescription, banoffiePie, biscoffCheesecake,etonMess);
 
 
-    const drinksSection = new  DomElement ("section", {}, "");
+    const drinksSection = new  DomElement ("section", {class: "menu-section"}, "");
     const drinksHeader = new DomElement ("h3", {}, "Drinks");
 
     //drinks items
