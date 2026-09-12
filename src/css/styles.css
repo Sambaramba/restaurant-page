@@ -420,6 +420,7 @@ section,
 
 .menu-item-container > p:first-of-type {
   text-align: center;
+  font-weight: bold;
 }
 
 .menu-item-container > p {
