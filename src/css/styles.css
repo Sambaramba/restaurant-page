@@ -403,8 +403,8 @@ section {
   /* background: var(--warm-cream); */
 }
 
-#menu-container section,
-#contact-info-container {
+.menu-section,
+#contact-inner-container {
   width: 100%;
   /* min-height: 20rem; */
   border: 0.25rem solid var(--leafy-green);
@@ -413,10 +413,6 @@ section {
   background: var(--warm-cream);
 }
 
-#contact-info-container {
-  /* min-height: 20rem; */
-  
-}
 
 .section-description {
   font-size: var(--xx-small);
@@ -466,5 +462,18 @@ section {
 /* .menu-item-container > p {
   padding-right: clamp(1.75rem, 1.1rem + 3.25vw, 5rem);
 } */
+
+/*----------contact page---------------*/
+
+#contact-inner-container {
+  /* min-height: 20rem; */
+  
+}
+
+.contact-section > h3:first-child {
+  text-align: center;
+}
+
+
 
 
