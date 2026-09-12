@@ -13,7 +13,7 @@ function displayMenu() {
          ""
         );
     
-    const menuHeader = new DomElement ("h2",{},"Menu")
+    const menuHeader = new DomElement ("h2",{},"Menu");
 
     
     function createSubSection (name, text) {
@@ -55,7 +55,7 @@ function displayMenu() {
     const lunchHeader = new DomElement ("h3", {}, "Lunch");
 
     //lunch menu items
-    const nachos = createMenuItem("Loaded Nachos", "14", "lentil/fake mince chilli,Jalapenos, Tomato Salsa, Guacamole, Light Creme Fraiche,Olives,Wholemeal Tortilla Nachos");
+    const nachos = createMenuItem("Loaded Nachos", "£14", "lentil/fake mince chilli,Jalapenos, Tomato Salsa, Guacamole, Light Creme Fraiche,Olives,Wholemeal Tortilla Nachos");
 
     const pizzaSubSection = createSubSection("Pizzas", "All pizzas come on wholemeal base with low-fat high-protein cheese but can substitute to chickpea base if allergic to gluten");
     const texMexPizza = createMenuItem("Tex Mex Pizza", "£15", "Black Beans, mince/nutritional yeast,Sweetcorn, peppers,onions,jalepenos, enchilada sauce, spinach, coriander");
