@@ -474,6 +474,26 @@ section {
   text-align: center;
 }
 
+#contact-container > * {
+  text-align: center;
+}
+#contact-container section:last-child {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+#times-container {
+  border: 0.06125rem solid var(--leafy-green);
+  width: 15rem;
+  padding: clamp(0.25rem, 0.125rem + 1vw, 1rem);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: flex-start;
+}
+
 
 
 
