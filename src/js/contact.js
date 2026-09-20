@@ -32,6 +32,12 @@ function displayContactPage() {
     contactInfoSection.append(contactInfoHeader, phoneNumberHeader, phoneNumberContent,addressHeader,addressContent, emailHeader, emailContent);
 
     const openingTimesSection = new DomElement ("Section",{},"");
+    const openingTimesHeader = new DomElement ("h3", {}, "Opening Times");
+    const mondayTimes = new DomElement ("p", {}, "Monday :  closed");
+    const weekdayTimes = new DomElement ("p", {}, "Tues - Friday :  7am - 6pm");
+    const saturdayTimes = new DomElement ("p", {}, "Saturday :  8am - 5:30pm");
+    const sundayTimes = new DomElement ("p", {}, "Sunday :  8:30am - 5pm");
+    openingTimesSection.append(openingTimesHeader, mondayTimes, weekdayTimes, saturdayTimes, sundayTimes,);
     
     contactInnerContainer.append(contactInfoSection,openingTimesSection);
     contactContainer.append(contactInnerContainer);
