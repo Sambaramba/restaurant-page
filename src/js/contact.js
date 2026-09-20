@@ -16,7 +16,20 @@ function displayContactPage() {
 
     const contactInfoSection = new DomElement ("section",{class: "contact-section"},"");
     const contactInfoHeader = new DomElement ("h3",{},"Contact Us");
-    contactInfoSection.append(contactInfoHeader);
+    //phone no, address,opening hours,email address
+    // Address: Unit 4B, Millennium Promenade, Harbourside,Bristol, BS1 5SZ
+    const phoneNumberHeader = new DomElement ("h5", {}, "Phone Number:");
+    const phoneNumberContent = new DomElement ("p", {}, "0117 496 0123");
+    const addressHeader = new DomElement ("h5",{}, "Address");
+    const addressContent = new DomElement ("p",{}, `Unit 4B, 
+                                                    Millennium Promenade,
+                                                    Harbourside,
+                                                    Bristol,
+                                                    BS1 5SZ`);
+    const emailHeader = new DomElement ("h5", {}, "Email address:");
+    const emailContent = new DomElement ("p", {}, "enquiries@soulfoodcafe.co.uk");
+    // const contactEmail = new DomElement ("p", {}, "Email address: enquires@soulcafe.com");
+    contactInfoSection.append(contactInfoHeader, phoneNumberHeader, phoneNumberContent,addressHeader,addressContent, emailHeader, emailContent);
 
     const openingTimesSection = new DomElement ("Section",{},"");
     
