@@ -32,27 +32,27 @@ function displayContactPage() {
     contactInfoSection.append(contactInfoHeader, phoneNumberHeader, phoneNumberContent,addressHeader,addressContent, emailHeader, emailContent);
 
 
-    
+
     const openingTimesSection = new DomElement ("Section",{},"");
     const openingTimesHeader = new DomElement ("h3", {}, "Opening Times");
     const openingTimesContainer = new DomElement ("div", {id: "times-container"}, "");
 
-    const mondayContainer = new DomElement ("div", {}, "");
+    const mondayContainer = new DomElement ("div", {class: "day-category-container"}, "");
     const mondayLabel = new DomElement ("p", {class: "day-label"}, "Monday :");
     const mondayHours = new DomElement ("p", {}, "Closed");
     mondayContainer.append(mondayLabel, mondayHours);
 
-    const weekdaysContainer = new DomElement ("div", {}, "");
+    const weekdaysContainer = new DomElement ("div", {class: "day-category-container"}, "");
     const weekdaysLabel = new DomElement ("p", {class: "day-label"}, "Tues - Friday :");
     const weekdaysHours = new DomElement ("p", {}, "7am - 6pm");
     weekdaysContainer.append(weekdaysLabel, weekdaysHours);
 
-    const saturdayContainer = new DomElement ("div", {}, "");
+    const saturdayContainer = new DomElement ("div", {class: "day-category-container"}, "");
     const saturdayLabel = new DomElement ("p", {class: "day-label"}, "Saturday :");
     const saturdayHours = new DomElement ("p", {}, "8am - 5:30pm");
     saturdayContainer.append(saturdayLabel,saturdayHours);
 
-    const sundayContainer = new DomElement ("div", {}, "");
+    const sundayContainer = new DomElement ("div", {class: "day-category-container"}, "");
     const sundayLabel = new DomElement ("p", {class: "day-label"}, "Sunday :");
     const sundayHours = new DomElement ("p", {}, "8:30am - 5pm");
     sundayContainer.append(sundayLabel,sundayHours);
