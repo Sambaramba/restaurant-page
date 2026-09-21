@@ -360,32 +360,24 @@ button:active {
   text-align: center;
 }
 
-/*homepage*/
+/*----------------homepage----------------------*/
 
 #welcome-msg {
     background: var(--light-green);
     border: 0.25rem solid var(--leafy-green);
     border-radius: 0.5rem;
-    /* margin:  2.5% clamp(2rem, 10%, 20rem); */
-    /* margin: 2.5% 0; */
-    /* padding: clamp(1rem, 0.7rem + 1.5vw, 2.5rem) clamp(2rem, 1.4rem + 3vw, 5rem); */
-    /* padding: clamp(0.75rem, 0.4rem + 1.75vw, 2.5rem) clamp(1rem, 0.2rem + 4vw, 5rem); */
-    /* overflow: scroll; */
 }
 
 #welcome-msg p {
   font-family: 'journal';
-  /* font-size: var(--large); */
-  /* line-height: 1.15rem; */
   margin-top: clamp(1rem, 0.8rem + 1.25vw,3rem);
   font-size: var(--large);
 }
 
 
-/* #content p {
-} */
 
-/*---Menu page--------*/
+/*----------------Menu page-----------------------------*/
+
 
 #menu-container {
   /* background: var(--light-green); */
@@ -412,10 +404,9 @@ section {
 .menu-section,
 #contact-inner-container {
   width: 100%;
-  /* min-height: 20rem; */
   border: 0.25rem solid var(--leafy-green);
   border-radius: 0.5rem;
-  padding: clamp(0.5rem, 0.3rem + 1vw, 1.5rem);
+  padding: clamp(1rem, 0.5rem + 2.5vw, 3.5rem);
   background: var(--warm-cream);
 }
 
@@ -427,7 +418,6 @@ section {
 }
 
 .menu-divider {
-  /* border: 0.0625rem solid black; */
   border: 0.0625rem solid var(--leafy-green);
   margin: clamp(0.5rem, 0.3rem + 1vw, 1rem);
   margin-top: clamp(1rem, 0.8rem + 1vw, 2rem);
@@ -457,19 +447,10 @@ section {
   font-size: var(--xx-small);
 }
 
-/* .name-price {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  padding-right: clamp(0.25rem, 0.2rem + 1.5vw, 2rem);
-  padding-right: clamp(0.25rem, -0.1rem + 1.75vw, 2rem);
-} */
 
-/* .menu-item-container > p {
-  padding-right: clamp(1.75rem, 1.1rem + 3.25vw, 5rem);
-} */
 
-/*----------contact page---------------*/
+/*------------contact page----------------------------------*/
+
 
 #contact-inner-container {
   padding: clamp(1.5rem, 1rem + 2.5vw, 4rem) clamp(0.75rem, 0.3rem + 2.25vw, 3rem);
@@ -478,13 +459,8 @@ section {
 
 .divider {
   border: 0.0625rem solid var(--leafy-green);
-  /* margin: clamp(0.5rem, 0rem + 2.5vw, 3rem); */
   margin: clamp(1rem, 0.3rem + 3.5vw, 4.5rem);
-  margin-bottom: clamp(0.5rem, 0rem + 2.5vw, 3rem);
-}
-
-.contact-section > h3:first-child {
-  /* text-align: center; */
+  /* margin-bottom: clamp(0.5rem, 0rem + 2.5vw, 3rem); */
 }
 
 #contact-container > * {
@@ -508,13 +484,21 @@ section {
 }
 
 #contact-container h3 {
-  margin-bottom: clamp(0.25rem, 0.1rem + 0.75vw, 1rem);
   text-decoration: underline;
   text-underline-offset: clamp(0.25rem, 0.15rem + 0.5vw, 0.75rem);
 }
 
 #contact-inner-container h5 {
   margin-top: clamp(0.25rem, 0.4rem + 1.75vw, 1.5rem);
+}
+
+#contact-info-header {
+  /* margin-bottom: clamp(0.75rem, 0.4rem + 1.75vw, 2.5rem); */
+  margin-bottom: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
+}
+
+#opening-times-header {
+  margin-bottom: clamp(0.25rem, 0.1rem + 0.75vw, 1rem);
 }
 
 .contact-section p:last-of-type {
@@ -525,11 +509,6 @@ section {
   text-align: start;
   margin-left: 0.25rem;
 }
-
-/* .day-category-container {
-  display: grid;
-  grid-template-columns: auto auto;
-} */
 
 
 
