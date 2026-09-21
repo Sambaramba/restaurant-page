@@ -494,6 +494,11 @@ section {
   text-align: end;
 }
 
+.day-hours {
+  text-align: start;
+  margin-left: 0.25rem;
+}
+
 /* .day-category-container {
   display: grid;
   grid-template-columns: auto auto;
