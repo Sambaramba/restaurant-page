@@ -260,6 +260,10 @@ h5 {
   font-size: var(--x-small);
 }
 
+p {
+  font-size: var(--small);
+}
+
 
 ul {
   margin-top: clamp(1rem, 0.8rem + 1.25vw,3rem);
@@ -287,7 +291,8 @@ button {
   border: none;
   background-color: inherit;
   color: var(--deep-purple);
-  font-size: var(--small)
+  font-size: var(--small);
+  /* font-family: "Roboto"; */
   
 }
 
