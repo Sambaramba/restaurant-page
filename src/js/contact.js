@@ -31,7 +31,7 @@ function displayContactPage() {
     // const contactEmail = new DomElement ("p", {}, "Email address: enquires@soulcafe.com");
     contactInfoSection.append(contactInfoHeader, phoneNumberHeader, phoneNumberContent,addressHeader,addressContent, emailHeader, emailContent);
 
-
+    const divider = new DomElement ("hr", {class: "divider"},"");
 
     const openingTimesSection = new DomElement ("Section",{},"");
     const openingTimesHeader = new DomElement ("h3", {}, "Opening Times");
@@ -61,7 +61,7 @@ function displayContactPage() {
     // openingTimesContainer.append(mondayContainer, weekdaysContainer, saturdayContainer, sundayContainer);
     openingTimesContainer.append(mondayLabel, mondayHours, weekdaysLabel, weekdaysHours, saturdayLabel, saturdayHours, sundayLabel, sundayHours);
     
-    contactInnerContainer.append(contactInfoSection,openingTimesSection);
+    contactInnerContainer.append(contactInfoSection, divider, openingTimesSection);
     contactContainer.append(contactInnerContainer);
     contentDiv.append(contactContainer);
 }
