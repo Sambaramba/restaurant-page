@@ -473,13 +473,15 @@ section {
 
 #contact-inner-container {
   /* min-height: 20rem; */
+  /* padding: clamp(1.5rem, 1rem + 2.5vw, 4rem) clamp(0.75rem, 0.3rem + 2.25vw, 3rem); */
+  padding: clamp(1.5rem, 0.8rem + 3.5vw, 5rem) clamp(0.75rem, 0.3rem + 2.25vw, 3rem);
   
 }
 
 .divider {
   border: 0.0625rem solid var(--leafy-green);
-  margin: clamp(0.5rem, 0rem + 2.5vw, 3rem);
-  margin-top: clamp(1rem, 0.3rem + 3.5vw, 4.5rem);
+  /* margin: clamp(0.5rem, 0rem + 2.5vw, 3rem); */
+  margin: clamp(1rem, 0.3rem + 3.5vw, 4.5rem);
 }
 
 .contact-section > h3:first-child {
@@ -511,7 +513,7 @@ section {
 }
 
 #contact-container h3 {
-  margin-top: clamp(0.25rem, 0.4rem + 1.75vw, 1.5rem);
+  /* margin-top: clamp(0.25rem, 0.4rem + 1.75vw, 1.5rem); */
   text-decoration: underline;
   text-underline-offset: clamp(0.25rem, 0.15rem + 0.5vw, 0.75rem);
 }
