@@ -15,7 +15,7 @@ function displayContactPage() {
     const contactInnerContainer = new DomElement ("div",{id: "contact-inner-container"},"");
 
     const contactInfoSection = new DomElement ("section",{class: "contact-section"},"");
-    const contactInfoHeader = new DomElement ("h3",{},"Contact Us");
+    const contactInfoHeader = new DomElement ("h3", {id: "contact-info-header"}, "Contact Us");
     //phone no, address,opening hours,email address
     // Address: Unit 4B, Millennium Promenade, Harbourside,Bristol, BS1 5SZ
     const phoneNumberHeader = new DomElement ("h5", {}, "Phone Number:");
@@ -34,7 +34,7 @@ function displayContactPage() {
     const divider = new DomElement ("hr", {class: "divider"},"");
 
     const openingTimesSection = new DomElement ("Section",{},"");
-    const openingTimesHeader = new DomElement ("h3", {}, "Opening Times");
+    const openingTimesHeader = new DomElement ("h3", {id: "opening-times-header"}, "Opening Times");
     const openingTimesContainer = new DomElement ("div", {id: "times-container"}, "");
 
     // const mondayContainer = new DomElement ("div", {class: "day-category-container"}, "");
