@@ -472,9 +472,7 @@ section {
 /*----------contact page---------------*/
 
 #contact-inner-container {
-  /* min-height: 20rem; */
-  /* padding: clamp(1.5rem, 1rem + 2.5vw, 4rem) clamp(0.75rem, 0.3rem + 2.25vw, 3rem); */
-  padding: clamp(1.5rem, 0.8rem + 3.5vw, 5rem) clamp(0.75rem, 0.3rem + 2.25vw, 3rem);
+  padding: clamp(1.5rem, 1rem + 2.5vw, 4rem) clamp(0.75rem, 0.3rem + 2.25vw, 3rem);
   
 }
 
@@ -482,10 +480,11 @@ section {
   border: 0.0625rem solid var(--leafy-green);
   /* margin: clamp(0.5rem, 0rem + 2.5vw, 3rem); */
   margin: clamp(1rem, 0.3rem + 3.5vw, 4.5rem);
+  margin-bottom: clamp(0.5rem, 0rem + 2.5vw, 3rem);
 }
 
 .contact-section > h3:first-child {
-  text-align: center;
+  /* text-align: center; */
 }
 
 #contact-container > * {
@@ -494,14 +493,10 @@ section {
 #contact-container section:last-child {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 
 #times-container {
-  /* border: 0.06125rem solid var(--leafy-green); */
-  /* border-radius: 0.5rem; */
-  /* width: clamp(14.5rem, 13.4rem + 5.5vw, 20rem); */
   padding: clamp(0.25rem, 0.125rem + 1vw, 1rem);
   display: grid;
   grid-template: repeat(4, 1fr) / 1fr 1fr;
@@ -513,7 +508,7 @@ section {
 }
 
 #contact-container h3 {
-  /* margin-top: clamp(0.25rem, 0.4rem + 1.75vw, 1.5rem); */
+  margin-bottom: clamp(0.25rem, 0.1rem + 0.75vw, 1rem);
   text-decoration: underline;
   text-underline-offset: clamp(0.25rem, 0.15rem + 0.5vw, 0.75rem);
 }
