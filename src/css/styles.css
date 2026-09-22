@@ -180,20 +180,9 @@ body {
               0 0.375rem 1.25rem rgba(0,0,0,0.08);
 }
 
-p + p {
-  /* margin-top: 0.5rem; */
-}
-
 p,ul {
   color: var(--deep-purple);
   
-}
-
-ul {
-  font-family: 'journal';
-  /* font-family: "fontdiner-swanky"; */
-  /* font-family: "mystery-quest"; */
-  font-size: var(--large);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -204,8 +193,6 @@ h1, h2, h3, h4, h5, h6 {
   /* line-height: 1.5rem; */
   color: var(--deep-purple);
 }
-
-
 
 header {
     background-color: var(--light-green);
@@ -245,7 +232,6 @@ h1 {
 
 h2 {
   font-size: var(--large);
-  /* color: var(--deep-purple); */
 }
 
 h3 {
@@ -266,6 +252,10 @@ p {
 
 
 ul {
+  font-family: 'journal';
+  /* font-family: "fontdiner-swanky"; */
+  /* font-family: "mystery-quest"; */
+  font-size: var(--large);
   margin-top: clamp(1rem, 0.8rem + 1.25vw,3rem);
   list-style: none;
 }
@@ -309,17 +299,9 @@ button:active {
   transform: translateY(-10%);
 }
 
-/* nav button {
-  background-color: var(--background-purple);
-  color: var(--deep-purple);
-  border: 0.125rem solid var(--deep-purple);
-  border-radius: 0.25rem;
-} */
-
 
 #main-header {
   font-size: var(--x-large);
-  /* color: var(--deep-purple); */
   text-decoration: underline;
   text-underline-offset: clamp(0.25rem, 0.15rem + 0.5vw, 0.75rem);
   font-family: "mystery-quest";
@@ -336,7 +318,6 @@ button:active {
   background: url(../more-greenery-cafe-lossless.webp) center / cover no-repeat scroll;
   min-height: 80vh;
   min-width: 100%;
-  /* margin: auto; */
   /* box-shadow: 0.5rem 1rem 1rem hsl(0deg 0% 0% / 0.25); */
 }
 
@@ -360,7 +341,10 @@ button:active {
   text-align: center;
 }
 
+
+
 /*----------------homepage----------------------*/
+
 
 #welcome-msg {
     background: var(--light-green);
@@ -380,8 +364,11 @@ button:active {
 
 
 #menu-container {
-  /* background: var(--light-green); */
-  /* padding-top: 0; */
+  padding-top: 0;
+}
+
+#menu-container > h2 {
+  margin: clamp(1rem, 0.7rem + 1.5vw, 2.5rem) 0;
 }
 
 #menu-container h3 {
@@ -466,6 +453,7 @@ section {
 #contact-container > * {
   text-align: center;
 }
+
 #contact-container section:last-child {
   display: flex;
   flex-direction: column;
