@@ -15,6 +15,17 @@ function displayMenu() {
     
     const menuHeader = new DomElement ("h2",{},"Menu");
 
+    function createSection(header, description) {
+        const section = new DomElement ("section", {class: "menu-section"}, "");
+        const sectionHeader = new DomElement ("h3", {}, `${header}`);
+        const sectionDescription = new DomElement ("p", {}, `${description}`);
+
+        section.append(sectionHeader)
+        if (description) {
+            section.append(sectionDescription);
+        }
+        return section;
+    }
     
     function createSubSection (name, text) {
         const subSectionDiv = new DomElement ("div", {class: "sub-section-container"}, "");
@@ -43,7 +54,7 @@ function displayMenu() {
 
 
     const breakfastSection = new DomElement ("section", {class: "menu-section"}, "");
-    const breakfastHeader = new DomElement ("h3", {}, "Breakfast");
+    const breakfastHeader = new DomElement ("h3", {class: "section-header-margin"}, "Breakfast");
 
     //breakfast menu items
     const veggieBreakfast = createMenuItem("Vegetarian Breakfast", "£13", "Sausages, Eggs, Creamy garlic Spinach sauce, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
@@ -52,7 +63,7 @@ function displayMenu() {
 
 
     const lunchSection = new  DomElement ("section", {class: "menu-section"}, "");
-    const lunchHeader = new DomElement ("h3", {}, "Lunch");
+    const lunchHeader = new DomElement ("h3", {class: "section-header-margin"}, "Lunch");
 
     //lunch menu items
     const nachos = createMenuItem("Loaded Nachos", "£14", "lentil/fake mince chilli,Jalapenos, Tomato Salsa, Guacamole, Light Creme Fraiche,Olives,Wholemeal Tortilla Nachos");
@@ -83,7 +94,7 @@ function displayMenu() {
 
 
     const drinksSection = new  DomElement ("section", {class: "menu-section"}, "");
-    const drinksHeader = new DomElement ("h3", {}, "Drinks");
+    const drinksHeader = new DomElement ("h3", {class: "section-header-margin"}, "Drinks");
 
     //drinks items
     const coke = createMenuItem("Coke (half/pint)", "£1.50/£3", "");
