@@ -396,7 +396,10 @@ section {
   padding: clamp(1rem, 0.5rem + 2.5vw, 3.5rem);
   background: var(--warm-cream);
 }
-
+.section-header-margin,
+.section-description {
+  margin-bottom: clamp(1rem, 0.8rem + 1vw, 2rem);
+}
 
 .section-description {
   font-size: var(--xx-small);
