@@ -117,37 +117,34 @@ h1, h2, h3, h4, h5, h6 {
     --background-green: hsl(96, 52%, 44%);
     --light-green: hsl(82, 52%, 78%);
     /* --button-purple: hsl(259, 7%, 26%); */
-    --background-purple: hsla(247, 6%, 70%, 0.53);
-    /* --background-purple: hsl(247, 6%, 70%); */
-    --purple-highlight: hsl(267, 56%, 29%);
+    /* --background-purple: hsla(247, 6%, 70%, 0.53); */
+    --background-purple: hsl(247, 6%, 70%);
+    /* --purple-highlight: hsl(267, 56%, 29%); */
     --deep-purple: hsl(258, 50%, 26%);
-    --shade-purple: hsl(247, 70%, 46%);
+    /* --shade-purple: hsl(247, 70%, 46%); */
     --deep-fig: #2E112D;
-    --strong-yellow: hsl(55, 92%, 51%);
+    /* --strong-yellow: hsl(55, 92%, 51%); */
     --warm-cream: hsl(40, 30%, 98%);
-    --amber-alert: hsl(28, 65%, 55%);
-    --laurel-green: hsl(91, 66%, 25%);
+    /* --amber-alert: hsl(28, 65%, 55%); */
+    /* --laurel-green: hsl(91, 66%, 25%); */
 
             
-    --deep-moss: #0B2216;
-    --sage-olive: #9DB884;
-    --vibrant-orchid: #9B5DE5;
-    --rich-plum: hsl(305, 45%, 25%);
+    /* --deep-moss: #0B2216; */
+    /* --sage-olive: #9DB884; */
+    /* --vibrant-orchid: #9B5DE5; */
+    /* --rich-plum: hsl(305, 45%, 25%); */
 
     /* Font Sizes */
-    /* --xx-small: clamp(0.5rem, 0.4rem + 0.5vw, 1rem); */
     --xx-small: clamp(0.5rem, 0.35rem + 0.75vw, 1.25rem);
     --x-small: clamp(0.6125rem, 0.435rem + 0.8875vw, 1.5rem);
     --small: clamp(0.75rem, 0.5rem + 1.25vw, 2rem);
     --medium: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
-    /* --large: clamp(1.5rem, 1.2rem + 1.5vw, 3rem); */
     --large: clamp(1.25rem, 0.9rem + 1.75vw, 3rem);
     --x-large: clamp(1.5rem, 1.1rem + 2vw, 3.5rem);
 }
 
 
 html,body {
-    /* height: 100%; */
     width: 100%;
     min-width: 100%;
     min-width: 320px;
@@ -156,7 +153,6 @@ html,body {
 
 body {
     opacity: 1 !important;
-    /* min-height: 100%; */
     min-height: 100vh;
     width: 100%;
     background-color: var(--deep-fig);
@@ -186,13 +182,23 @@ p,ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  /* margin-bottom: 1rem; */
-  /* font-family: "fontdiner-swanky"; */
   font-family: "mystery-quest";
-  /* font-family: "henny-penny"; */
-  /* line-height: 1.5rem; */
   color: var(--deep-purple);
 }
+
+.menu-section,
+#contact-inner-container {
+  width: 100%;
+  border: 0.25rem solid var(--leafy-green);
+  border-radius: 0.5rem;
+  padding: clamp(1rem, 0.5rem + 2.5vw, 3.5rem);
+  background-color: var(--warm-cream);
+}
+.section-header-margin,
+.section-description {
+  margin-bottom: clamp(1rem, 0.8rem + 1vw, 2rem);
+}
+
 
 header {
     background-color: var(--light-green);
@@ -217,9 +223,9 @@ footer {
 
 nav {
     display: flex;
-    width: clamp(9.125rem, 5.9098rem + 16.0759vw, 25rem);
+    /* width: clamp(9.125rem, 5.9098rem + 16.0759vw, 25rem); */
     width: clamp(9.1875rem, 5.985rem + 16.0127vw, 25rem);
-    gap: clamp(0.125rem, -0.1535rem + 1.3924vw, 1.5rem);
+    /* gap: clamp(0.125rem, -0.1535rem + 1.3924vw, 1.5rem); */
     gap: clamp(0.25rem, -0.0032rem + 1.2658vw, 1.5rem);
 }
 
@@ -299,6 +305,19 @@ button:active {
   transform: translateY(-10%);
 }
 
+section {
+  /* width: 100%; */
+  /* min-height: 20rem; */
+  /* border: 0.25rem solid var(--leafy-green);
+  border-radius: 0.5rem; */
+  /* padding: clamp(0.5rem, 0.3rem + 1vw, 1.5rem); */
+  /* background: var(--warm-cream); */
+}
+
+section:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 
 #main-header {
   font-size: var(--x-large);
@@ -311,17 +330,34 @@ button:active {
 
 
 #content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(../more-greenery-cafe-lossless.webp) 0% 0% / 100% 100% no-repeat scroll;
-  background: url(../more-greenery-cafe-lossless.webp) center / cover no-repeat scroll;
+  /* background: url(../more-greenery-cafe-lossless.webp) 0% 0% / 100% 100% no-repeat scroll;
+  background: url(../more-greenery-cafe-lossless.webp) center / cover no-repeat scroll; */
+  background: url(../more-greenery-cafe-lossless.webp) center / cover no-repeat fixed;
   min-height: 80vh;
   min-width: 100%;
+  width: 100%;
+  /* overflow: hidden; */
   /* box-shadow: 0.5rem 1rem 1rem hsl(0deg 0% 0% / 0.25); */
 }
 
+/* #content::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: url(../more-greenery-cafe-lossless.webp) center / cover no-repeat fixed;
+} */
+
 .inner-content-container {
+  /* position: relative;
+  z-index: 2; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -339,6 +375,12 @@ button:active {
 
 #content h2 {
   text-align: center;
+}
+
+.section-description {
+  font-size: var(--xx-small);
+  text-align: center;
+  margin-bottom: clamp(1rem, 0.8rem + 1vw, 2rem);
 }
 
 
@@ -375,37 +417,7 @@ button:active {
   text-align: center;
 }
 
-section:not(:last-child) {
-  margin-bottom: 1rem;
-}
 
-section {
-  /* width: 100%; */
-  /* min-height: 20rem; */
-  /* border: 0.25rem solid var(--leafy-green);
-  border-radius: 0.5rem; */
-  /* padding: clamp(0.5rem, 0.3rem + 1vw, 1.5rem); */
-  /* background: var(--warm-cream); */
-}
-
-.menu-section,
-#contact-inner-container {
-  width: 100%;
-  border: 0.25rem solid var(--leafy-green);
-  border-radius: 0.5rem;
-  padding: clamp(1rem, 0.5rem + 2.5vw, 3.5rem);
-  background: var(--warm-cream);
-}
-.section-header-margin,
-.section-description {
-  margin-bottom: clamp(1rem, 0.8rem + 1vw, 2rem);
-}
-
-.section-description {
-  font-size: var(--xx-small);
-  text-align: center;
-  margin-bottom: clamp(1rem, 0.8rem + 1vw, 2rem);
-}
 
 .menu-divider {
   border: 0.0625rem solid var(--leafy-green);
@@ -415,12 +427,14 @@ section {
 
 .menu-item-container{
   display: grid;
-  grid-template-columns: 1fr clamp(4rem, 3.4rem + 3vw, 7rem);
+  grid-template-columns: 1fr clamp(3rem, 2.3rem + 3.5vw, 6.5rem);
   margin-top: clamp(0.5rem, 0.3rem + 1vw, 1rem);
 }
 
+
 .menu-item-container > p:first-of-type {
-  text-align: center;
+  /* text-align: center; */
+  text-align: end;
   font-weight: bold;
 }
 
