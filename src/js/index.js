@@ -15,10 +15,11 @@ const header = document.querySelector("header");
 
 header.addEventListener("click", function(event) {
     const closestTab = event.target.closest("button");
-    console.log(closestTab.id);
     if (!closestTab) {
         console.log("Could not find button element to change tab")
+        return;
     }
+    console.log(closestTab.id);
 
     switch (closestTab.id) {
         case "main-header":
@@ -29,7 +30,6 @@ header.addEventListener("click", function(event) {
             displayMenu();
             break;
         case "contact":
-            console.log("add contact display function");
             displayContactPage();
             break;
         default:
