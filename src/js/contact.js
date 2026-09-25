@@ -7,6 +7,8 @@ function displayContactPage() {
 
     //clear content section
     removeAllChildNodes(contentDiv);
+
+    
     const contactContainer = new DomElement (
         "div",
         { id: "contact-container", class:  "fade-in inner-content-container"},
@@ -16,19 +18,19 @@ function displayContactPage() {
 
     const contactInfoSection = new DomElement ("section",{class: "contact-section"},"");
     const contactInfoHeader = new DomElement ("h3", {id: "contact-info-header"}, "Contact Us");
-    //phone no, address,opening hours,email address
-    // Address: Unit 4B, Millennium Promenade, Harbourside,Bristol, BS1 5SZ
+
     const phoneNumberHeader = new DomElement ("h5", {}, "Phone Number:");
     const phoneNumberContent = new DomElement ("p", {}, "0117 496 0123");
+
     const addressHeader = new DomElement ("h5",{}, "Address");
     const addressContent = new DomElement ("p",{}, `Unit 4B, 
                                                     Millennium Promenade,
                                                     Harbourside,
                                                     Bristol,
                                                     BS1 5SZ`);
+
     const emailHeader = new DomElement ("h5", {}, "Email address:");
     const emailContent = new DomElement ("p", {}, "enquiries@soulfoodcafe.co.uk");
-    // const contactEmail = new DomElement ("p", {}, "Email address: enquires@soulcafe.com");
     contactInfoSection.append(contactInfoHeader, phoneNumberHeader, phoneNumberContent,addressHeader,addressContent, emailHeader, emailContent);
 
     const divider = new DomElement ("hr", {class: "divider"},"");
@@ -37,30 +39,21 @@ function displayContactPage() {
     const openingTimesHeader = new DomElement ("h3", {id: "opening-times-header"}, "Opening Times");
     const openingTimesContainer = new DomElement ("div", {id: "times-container"}, "");
 
-    // const mondayContainer = new DomElement ("div", {class: "day-category-container"}, "");
     const mondayLabel = new DomElement ("p", {class: "day-label"}, "Monday :");
     const mondayHours = new DomElement ("p", {class: "day-hours"}, "Closed");
-    // mondayContainer.append(mondayLabel, mondayHours);
 
-    // const weekdaysContainer = new DomElement ("div", {class: "day-category-container"}, "");
     const weekdaysLabel = new DomElement ("p", {class: "day-label"}, "Tues - Friday :");
     const weekdaysHours = new DomElement ("p", {class: "day-hours"}, "7am - 6pm");
-    // weekdaysContainer.append(weekdaysLabel, weekdaysHours);
-
-    // const saturdayContainer = new DomElement ("div", {class: "day-category-container"}, "");
+    
     const saturdayLabel = new DomElement ("p", {class: "day-label"}, "Saturday :");
     const saturdayHours = new DomElement ("p", {class: "day-hours"}, "8am - 5:30pm");
-    // saturdayContainer.append(saturdayLabel,saturdayHours);
-
-    // const sundayContainer = new DomElement ("div", {class: "day-category-container"}, "");
+    
     const sundayLabel = new DomElement ("p", {class: "day-label"}, "Sunday :");
     const sundayHours = new DomElement ("p", {class: "day-hours"}, "8:30am - 5pm");
-    // sundayContainer.append(sundayLabel,sundayHours);
+
 
     openingTimesSection.append(openingTimesHeader, openingTimesContainer);
-    // openingTimesContainer.append(mondayContainer, weekdaysContainer, saturdayContainer, sundayContainer);
     openingTimesContainer.append(mondayLabel, mondayHours, weekdaysLabel, weekdaysHours, saturdayLabel, saturdayHours, sundayLabel, sundayHours);
-    
     contactInnerContainer.append(contactInfoSection, divider, openingTimesSection);
     contactContainer.append(contactInnerContainer);
     contentDiv.append(contactContainer);
