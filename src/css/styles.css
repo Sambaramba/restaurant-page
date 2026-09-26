@@ -202,14 +202,6 @@ li {
   text-align: start;
 }
 
-/* ul li {
-  position: relative;
-  padding-left: 1em;
-  margin-bottom: 0.5em;
-  line-height: 1;
-  text-align: start;
-} */
-
 li::before {
   content: "•";
   position: absolute;
@@ -225,16 +217,12 @@ button {
   color: var(--deep-purple);
   font-size: var(--small);
   /* font-family: "Roboto"; */
-  /* font-weight: bold; */
-  
 }
 
 button:hover {
   transform: scale(1.05);
   text-decoration: underline;
   font-weight: bold;
-  /* text-shadow: 0.0625rem 0.0625rem var(--warm-cream); */
-  /* text-shadow: 0.125rem 0.125rem var(--warm-cream); */
   cursor: pointer;
 }
 
@@ -361,8 +349,29 @@ h3 {
 
 
 
-/*----------------homepage----------------------*/
+/*------------Footer-----------------------*/
 
+#copywrite-info {
+  color: var(--warm-cream);
+  margin: clamp(0.625rem, 0.4rem + 1.125vw, 1.75rem);
+  font-size: var(--xx-small);
+}
+
+#copywrite-info a {
+  color: var(--warm-cream);
+  text-decoration: none;
+}
+
+#copywrite-info a:hover {
+  font-weight: bold;
+}
+
+#copywrite-info a:active {
+  transform: translateY(-10%);
+}
+
+
+/*----------------homepage----------------------*/
 
 #welcome-msg {
   background: var(--light-green);
@@ -376,8 +385,8 @@ h3 {
   font-size: var(--large);
 }
 
-/*----------------Menu page-----------------------------*/
 
+/*----------------Menu page-----------------------------*/
 
 #menu-container {
   padding-top: 0;
@@ -469,24 +478,4 @@ h3 {
   margin-left: 0.25rem;
 }
 
-/*------------Footer-----------------------*/
-
-#copywrite-info {
-  color: var(--warm-cream);
-  margin: clamp(0.625rem, 0.4rem + 1.125vw, 1.75rem);
-  font-size: var(--xx-small);
-}
-
-#copywrite-info a {
-  color: var(--warm-cream);
-  text-decoration: none;
-}
-
-#copywrite-info a:hover {
-  font-weight: bold;
-}
-
-#copywrite-info a:active {
-  transform: translateY(-10%);
-}
 
