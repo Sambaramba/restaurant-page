@@ -1,32 +1,5 @@
 import { DomElement, removeAllChildNodes } from "./utils.js";
 
-//  <div id="welcome-msg" class="fade-in inner-content-container">
-//         <h2 class="fade-in">Welcome!</h2>
-//         <p class="fade-in"> Welcome to the soul food cafe, a friendly restaurant with a soulful kick.
-//              Our aim is to make a restaurant thats good for the planet, healthy and balanced for the body but tastes good too.
-//         </p>
-//         <p class="fade-in">
-//              We are a vegetarian/vegan restaurant that aims to be as transparent about what we do and how we do it. 
-//              We hopefully create a nice relaxing atmosphere and peace of mind with our ethics. 
-//              We also have live bands or djs to get a bit of funk and soul in the evenings after cafe the has closed.
-//         </p>
-//         <ul>
-//             <li>well balanced meals</li>
-//             <li>not losing none veggie/vegan qualities</li>
-//             <li>fairtrade</li>
-//             <li>both fake meat and non fake meat options</li>
-//             <li>comfortable restaurant vibes</li>
-//             <li>play nice soulful and chilled music</li>
-//             <li>clean energy and sustainable throughout the chain</li>
-//             <li>not pretentious or up ourselves with this but pure</li>
-//             <li>strike that balance of collaboration,stylish and friendly</li>
-//         </ul>
-//     </div>
-
-
-//delete everything in #content first
-//could do utils.js func for this
-//then write code in func to add everything to #content.
 function displayHomepage() {
     console.log("display homepage ran");
     const contentDiv = document.querySelector("#content");
@@ -45,7 +18,7 @@ function displayHomepage() {
         {class: "fade-in" },
         "Welcome!"
     )
-    //use dom element constructor to create all elements with styles
+    
     const firstWelcomeParagraph = new DomElement (
         "p",
         { class: "fade-in"},
@@ -70,7 +43,6 @@ function displayHomepage() {
     const listItem6 = new DomElement ("li",{}, "Play lovely soulful and chilled music");
     const listItem7 = new DomElement ("li",{}, "Clean energy and sustainable throughout the chain");
     const listItem8 = new DomElement ("li",{}, "We aim to be sincere and transparent");
-    // const listItem9 = new DomElement ("li",{}, "Value collaboration, so please let us know");
 
     welcomeList.append(listItem1,listItem2,listItem3,listItem4,listItem5,listItem6,listItem7,listItem8);
     welcomeMsg.append(welcomeHeader,firstWelcomeParagraph,secondWelcomeParagraph,welcomeList);
