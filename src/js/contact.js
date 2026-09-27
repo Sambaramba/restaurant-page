@@ -22,16 +22,34 @@ function displayContactPage() {
     const phoneNumberHeader = new DomElement ("h5", {}, "Phone Number:");
     const phoneNumberContent = new DomElement ("p", {}, "0117 496 0123");
 
-    const addressHeader = new DomElement ("h5",{}, "Address");
+    const addressHeader = new DomElement ("h5",{}, "Address:");
     const addressContent = new DomElement ("p",{}, `Unit 4B, 
                                                     Millennium Promenade,
                                                     Harbourside,
                                                     Bristol,
                                                     BS1 5SZ`);
+    
+    const addressFirstLine = new DomElement ("p",{}, "Unit 4B");
+    const addressSecondLine = new DomElement ("p",{}, "Millennium Promenade,");
+    const addressThirdLine = new DomElement ("p",{}, "Harbourside,");
+    const addressFourthLine = new DomElement ("p",{}, "Bristol,");
+    const addressFifthLine = new DomElement ("p",{}, "BS1 5SZ");
+
 
     const emailHeader = new DomElement ("h5", {}, "Email address:");
     const emailContent = new DomElement ("p", {}, "enquiries@soulfoodcafe.co.uk");
-    contactInfoSection.append(contactInfoHeader, phoneNumberHeader, phoneNumberContent,addressHeader,addressContent, emailHeader, emailContent);
+    contactInfoSection.append(contactInfoHeader,
+                              phoneNumberHeader, 
+                              phoneNumberContent,
+                              addressHeader,
+                              addressFirstLine,
+                              addressSecondLine,
+                              addressThirdLine,
+                              addressFourthLine,
+                              addressFifthLine, 
+                              emailHeader, 
+                              emailContent
+                            );
 
     const divider = new DomElement ("hr", {class: "divider"},"");
 
