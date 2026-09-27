@@ -37,6 +37,8 @@ header.addEventListener("click", function(event) {
     }
 })
 
+document.body.classList.remove("is-loading");
+
 
 
 
