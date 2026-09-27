@@ -70,7 +70,7 @@ function displayMenu() {
 
     const pizzaSubSection = createSubSection("Pizzas", "All pizzas come on wholemeal base with low-fat high-protein cheese but can substitute to chickpea base if allergic to gluten");
     const texMexPizza = createMenuItem("Tex Mex Pizza", "£15", "Black Beans, mince/nutritional yeast,Sweetcorn, peppers,onions,jalepenos, enchilada sauce, spinach, coriander");
-    const spinachMushPizza = createMenuItem("Spinach and mushroom pizza", "£15", "Spinach, mushrooms,black olives,artichoke,sweetcorn,garlic, fake chicken/nutritional yeast");
+    const spinachMushPizza = createMenuItem("Spinach mushroom pizza", "£15", "Spinach, mushrooms,black olives,artichoke,sweetcorn,garlic, fake chicken/nutritional yeast");
     pizzaSubSection.append(texMexPizza, spinachMushPizza);
 
     const burgerSubSection = createSubSection("Burgers", "All burgers come in wholemeal buns, served with large fresh salad and baked chips")
