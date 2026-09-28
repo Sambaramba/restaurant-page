@@ -14,6 +14,7 @@ function displayContactPage() {
         { id: "contact-container", class:  "fade-in inner-content-container"},
          ""
         );
+
     const contactInnerContainer = new DomElement ("div",{id: "contact-inner-container"},"");
 
     const contactInfoSection = new DomElement ("section",{class: "contact-section"},"");
@@ -23,18 +24,11 @@ function displayContactPage() {
     const phoneNumberContent = new DomElement ("p", {}, "0117 496 0123");
 
     const addressHeader = new DomElement ("h5",{}, "Address:");
-    const addressContent = new DomElement ("p",{}, `Unit 4B, 
-                                                    Millennium Promenade,
-                                                    Harbourside,
-                                                    Bristol,
-                                                    BS1 5SZ`);
-    
     const addressFirstLine = new DomElement ("p",{}, "Unit 4B");
     const addressSecondLine = new DomElement ("p",{}, "Millennium Promenade,");
     const addressThirdLine = new DomElement ("p",{}, "Harbourside,");
     const addressFourthLine = new DomElement ("p",{}, "Bristol,");
     const addressFifthLine = new DomElement ("p",{}, "BS1 5SZ");
-
 
     const emailHeader = new DomElement ("h5", {}, "Email address:");
     const emailContent = new DomElement ("p", {}, "enquiries@soulfoodcafe.co.uk");
@@ -68,7 +62,6 @@ function displayContactPage() {
     
     const sundayLabel = new DomElement ("p", {class: "day-label"}, "Sunday :");
     const sundayHours = new DomElement ("p", {class: "day-hours"}, "8:30am - 5pm");
-
 
     openingTimesSection.append(openingTimesHeader, openingTimesContainer);
     openingTimesContainer.append(mondayLabel, mondayHours, weekdaysLabel, weekdaysHours, saturdayLabel, saturdayHours, sundayLabel, sundayHours);

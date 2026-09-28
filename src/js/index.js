@@ -8,10 +8,8 @@ console.log("js file is running in browser");
 
 document.addEventListener('DOMContentLoaded',displayHomepage);
 
-//header/home,menu,contact
 
 const header = document.querySelector("header");
-
 
 header.addEventListener("click", function(event) {
     const closestTab = event.target.closest("button");

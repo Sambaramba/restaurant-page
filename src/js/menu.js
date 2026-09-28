@@ -1,32 +1,13 @@
 import { DomElement, removeAllChildNodes } from "./utils.js";
 
 function displayMenu() {
-    console.log("display menu ran");
 
     const contentDiv = document.querySelector("#content");
 
     //clear content section
     removeAllChildNodes(contentDiv);
-    const menuContainer = new DomElement (
-        "div",
-        { id: "menu-container", class:  "fade-in inner-content-container"},
-         ""
-        );
-    
-    const menuHeader = new DomElement ("h2",{},"Menu");
 
-    function createSection(header, description) {
-        const section = new DomElement ("section", {class: "menu-section"}, "");
-        const sectionHeader = new DomElement ("h3", {}, `${header}`);
-        const sectionDescription = new DomElement ("p", {}, `${description}`);
-
-        section.append(sectionHeader)
-        if (description) {
-            section.append(sectionDescription);
-        }
-        return section;
-    }
-    
+    //helper functions
     function createSubSection (name, text) {
         const subSectionDiv = new DomElement ("div", {class: "sub-section-container"}, "");
         const divider = new DomElement ("hr", {class: "menu-divider"},"");
@@ -37,35 +18,41 @@ function displayMenu() {
     }
 
     function createMenuItem (name,price,text) {
-        const menuItemDiv =  new DomElement ("div", {class: "menu-item-container"},"");
 
-        // const namePriceContainer = new DomElement ("span", {class: "name-price"},"");
+        const menuItemDiv =  new DomElement ("div", {class: "menu-item-container"},"");
         const nameOfItem = new DomElement ("h4", {},`${name}`);
         const priceOfItem = new DomElement ("p", {},`${price}`);
-        
         const description = new DomElement ("p", {},`${text}`);
-
-        // namePriceContainer.append(nameOfItem,priceOfItem);
-        // menuItemDiv.append(namePriceContainer,description);
         menuItemDiv.append(nameOfItem,priceOfItem,description);
-        // parent.appendChild(menuItemDiv);
+        
         return menuItemDiv;
     }
 
 
+    //-------menu page content-------------
+
+    const menuContainer = new DomElement (
+    "div",
+    { id: "menu-container", class:  "fade-in inner-content-container"},
+        ""
+    );
+    const menuHeader = new DomElement ("h2",{},"Menu");
+
+
+    //breakfast section
     const breakfastSection = new DomElement ("section", {class: "menu-section"}, "");
     const breakfastHeader = new DomElement ("h3", {class: "section-header-margin"}, "Breakfast");
 
-    //breakfast menu items
     const veggieBreakfast = createMenuItem("Vegetarian Breakfast", "£13", "Sausages, Eggs, Creamy garlic Spinach sauce, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
     const veganBreakfast = createMenuItem("Vegan Breakfast", "£13", "Sausages, Scrambled Tofu, Creamy garlic Spinach sauce, Grilled Tomatoes, Mushrooms, Wholemeal Bread and butter")
     breakfastSection.append(breakfastHeader,veggieBreakfast, veganBreakfast);
 
 
+
+    //lunch section
     const lunchSection = new  DomElement ("section", {class: "menu-section"}, "");
     const lunchHeader = new DomElement ("h3", {class: "section-header-margin"}, "Lunch");
 
-    //lunch menu items
     const nachos = createMenuItem("Loaded Nachos", "£14", "lentil/fake mince chilli,Jalapenos, Tomato Salsa, Guacamole, Light Creme Fraiche,Olives,Wholemeal Tortilla Nachos");
 
     const pizzaSubSection = createSubSection("Pizzas", "All pizzas come on wholemeal base with low-fat high-protein cheese but can substitute to chickpea base if allergic to gluten");
@@ -81,22 +68,23 @@ function displayMenu() {
     lunchSection.append(lunchHeader,nachos,pizzaSubSection, burgerSubSection);
 
 
+
+    //Dessert section
     const dessertSection = new  DomElement ("section", {class: "menu-section"}, "");
     const dessertHeader = new DomElement ("h3", {}, "Desserts");
     const dessertDescription = new DomElement("p", {class: "section-description"}, "All deserts can be made vegan if you notify staff");
 
-    //desert items
     const banoffiePie = createMenuItem("Banoffie Pie","£7", "Vanilla oat base, toffee caramel, bananas, oaty whipped creamy mascapone, dark choc shavings");
-    // const veganBanoffiePie = createMenuItem("Vegan Banoffie Pie","£7", "Vanilla oat base, date caramel, bananas, oaty whipped cream, dark choc shavings");
     const biscoffCheesecake = createMenuItem("Biscoff Cheesecake", "£7", "Creamy vanilla cheesecake with crushed Biscoff® pieces. Topped with delicious Biscoff® spread & crumb, on crunchy oaty vanilla biscuit base.")
     const etonMess = createMenuItem("Clotted cream Eton Mess", "£7", "Delicious clotted cream, with fresh berries and broken up bits of crunchy meringue, drizzled with raspberry coulis");
     dessertSection.append(dessertHeader,dessertDescription, banoffiePie, biscoffCheesecake,etonMess);
 
 
+
+    //Drinks Section
     const drinksSection = new  DomElement ("section", {class: "menu-section"}, "");
     const drinksHeader = new DomElement ("h3", {class: "section-header-margin"}, "Drinks");
 
-    //drinks items
     const coke = createMenuItem("Coke (half/pint)", "£1.50/£3", "");
     const lemonade = createMenuItem("lemonade (half/pint)", "£1.50/£3", "");
     const appletiser = createMenuItem("Appletiser (Bottle)", "£2", "");

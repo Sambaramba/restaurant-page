@@ -1,12 +1,14 @@
 import { DomElement, removeAllChildNodes } from "./utils.js";
 
 function displayHomepage() {
-    console.log("display homepage ran");
     const contentDiv = document.querySelector("#content");
 
     //clear content section
     removeAllChildNodes(contentDiv);
-    
+
+
+    //---------home page content--------------
+
     const welcomeMsg = new DomElement (
         "div",
         { id : "welcome-msg",
