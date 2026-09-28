@@ -1,7 +1,6 @@
 import { DomElement, removeAllChildNodes } from "./utils.js";
 
 function displayContactPage() {
-    console.log("display contact page ran");
 
     const contentDiv = document.querySelector("#content");
 
