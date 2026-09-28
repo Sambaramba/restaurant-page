@@ -1,17 +1,20 @@
 class DomElement {
-    // add ,parentSelector to parameters if adding in func
+    
     constructor (type,attributes,text) {
+
+        //Create dom element
         this.element = document.createElement(type)
-        // const parentElement = document.querySelector(`${parentSelector}`);
-        // console.log(parentElement);
+        
+        //Add attributes to element
         for (const attribute in attributes) {
             this.element.setAttribute(attribute, attributes[attribute])
         }
+
+        //Add text to element
         this.element.textContent = text;
-        // parentElement.appendChild(this.element);
+        
         return this.element;
     }
-    // return Element
 }
 
 const removeAllChildNodes = function(element) {
